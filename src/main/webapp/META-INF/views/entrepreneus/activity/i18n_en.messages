@@ -1,0 +1,30 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+entrepreneus.activity.form.label.title = Title
+entrepreneus.activity.form.label.start = Start date
+entrepreneus.activity.form.label.end = End date 
+entrepreneus.activity.form.label.budget = Budget
+
+entrepreneus.activity.list.label.title = Title
+entrepreneus.activity.list.label.start = Start date
+entrepreneus.activity.list.label.end = End date
+entrepreneus.activity.list.label.budget = Budget
+
+entrepreneus.activity.form.button.create = Create activity
+entrepreneus.activity.form.button.update = Update
+entrepreneus.activity.form.button.delete = Delete
+
+budget.error.message = The sum of budgets in all activities must be equal or lower than the Money value of the Investment they belong to
+error.money = The Money must be in "EUR" o "€"
+error.plus =  The Money must be > 0
+error.nospam = You used inappropriate language, please do not use words like that
+
+entrepreneus.activity.form.button.return = Return

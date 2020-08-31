@@ -1,0 +1,14 @@
+investor.investment.list.label.ticker = Ticker
+investor.investment.list.label.round = Round
+investor.investment.list.label.title = Title
+investor.investment.list.label.description = Description
+
+investor.investment.form.label.ticker = Ticker
+investor.investment.form.label.moment = Creation Moment
+investor.investment.form.label.round = Round
+investor.investment.form.label.title = Title
+investor.investment.form.label.description = Description
+investor.investment.form.label.money = Money
+investor.investment.form.label.url = URL
+investor.application.form.button.create = Create application
+investor.investment.form.button.return = Return

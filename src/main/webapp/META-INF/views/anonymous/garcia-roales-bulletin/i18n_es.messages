@@ -1,0 +1,13 @@
+# i18n_es.messages
+
+anonymous.garcia-roales-bulletin.form.label.birth = Fecha de nacimiento:
+anonymous.garcia-roales-bulletin.form.label.name = Nombre:
+anonymous.garcia-roales-bulletin.form.label.surname = Apellido:
+anonymous.garcia-roales-bulletin.form.label.uvus = UVUS:
+anonymous.garcia-roales-bulletin.form.button.create = Crear
+anonymous.garcia-roales-bulletin.form.button.return = Volver
+
+anonymous.garcia-roales-bulletin.list.label.birth = Fecha de nacimiento
+anonymous.garcia-roales-bulletin.list.label.name = Nombre
+anonymous.garcia-roales-bulletin.list.label.surname = Apellido
+anonymous.garcia-roales-bulletin.list.label.uvus = UVUS

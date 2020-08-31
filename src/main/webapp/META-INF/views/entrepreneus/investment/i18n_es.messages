@@ -1,0 +1,54 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+entrepreneus.investment.form.label.ticker= Ticker
+entrepreneus.investment.form.label.moment= Momento de Creación
+entrepreneus.investment.form.label.round= Rondas
+entrepreneus.investment.form.label.title= Título
+entrepreneus.investment.form.label.description= Descripción
+entrepreneus.investment.form.label.money= Dinero
+entrepreneus.investment.form.label.url= URL
+
+entrepreneus.investment.form.label.moment.m = Momento de Creación (Este campo se rellenará automáticamente)
+entrepreneus.investment.form.label.entrepreneur = Empresari@ de la Inversión
+entrepreneus.accounting-record.form.button.list = Registros contables
+
+
+entrepreneus.accounting-record.form.button.list = Registros contables
+
+	
+
+entrepreneus.investment.form.button.return= Volver
+
+entrepreneus.investment.list.label.ticker= Ticker
+entrepreneus.investment.list.label.title= Título
+entrepreneus.investment.list.label.description= Descripción
+
+
+entrepreneus.investment.form.button.delete = Eliminar
+entrepreneus.investment.form.button.update = Actualizar
+entrepreneus.investment.form.label.finalMode = Modo Final
+
+entrepreneus.activity.form.button.list = Listar actividades
+
+a.o.error.money = El dinero debe tener un formato de "EUR" o "€"
+a.o.error.plus =  El dinero debe ser mayor a 0
+entrepreneur.investment.error.ticker = El Ticker debe ser único
+
+entrepreneus.investment.form.button.create = Crear
+
+entr.investment.error.act.not100 = La suma de las actividades no es igual al precio de inversión
+entr.investment.error.act.empty = Las actividades estan vacias y no pueden estarlo
+
+
+entrepreneur.investment.spam.part.one = No use palabras malsonantes, La Frase "
+entrepreneur.investment.spam.part.two = " no esta permitida!
+
+entre.invest.application.delete = No puedes eliminar una inversión que ya ha sido aplicada

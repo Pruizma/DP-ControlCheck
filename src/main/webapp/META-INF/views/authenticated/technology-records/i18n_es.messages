@@ -1,0 +1,30 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+authenticated.technology-records.list.label.title = Título
+authenticated.technology-records.list.label.activitySector = Sector de actividad
+authenticated.technology-records.list.label.inventor = Inventor
+authenticated.technology-records.list.label.description = Descripción
+authenticated.technology-records.list.label.website = Página Web
+authenticated.technology-records.list.label.email = Correo electrónico
+authenticated.technology-records.list.label.openSource = Fuente abierta
+authenticated.technology-records.list.label.stars = Estrellas
+
+authenticated.technology-records.form.label.title = Título
+authenticated.technology-records.form.label.activitySector = Sector de actividad
+authenticated.technology-records.form.label.inventor = Inventor
+authenticated.technology-records.form.label.description = Descripcion
+authenticated.technology-records.form.label.website = Página Web
+authenticated.technology-records.form.label.email = Correo electrónico
+authenticated.technology-records.form.label.openSource = Fuente abierta
+authenticated.technology-records.form.label.stars = Estrellas
+	
+authenticated.technology-records.form.button.create = Crear
+authenticated.technology-records.form.button.return = Volver

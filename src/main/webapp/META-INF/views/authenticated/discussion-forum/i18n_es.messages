@@ -1,0 +1,28 @@
+  
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+
+authenticated.discussion-forum.list.label.title = Título
+authenticated.discussion-forum.list.label.ticker = Código
+authenticated.discussion-forum.list.label.username = Nombres de usuario
+
+authenticated.discussion-forum.form.label.title = Título	
+authenticated.discussion-forum.form.label.ticker = Código
+authenticated.discussion-forum.form.buttom.create = Crear
+authenticated.discussion-forum.form.button.delete = Borrar
+authenticated.discussion-forum.form.button.update = Actualizar
+authenticated.discussion-forum.form.label.leader = Líder
+authenticated.discussion-forum.form.label.username = Usuario de los participantes (ej: "investor01, entrepreneus1")
+authenticated.discussionForum.form.button.newmessage = Mensaje Nuevo
+
+
+authenticated.discussion-forum.form.buttom.message = Mensajes
+authenticated.discussion-forum.form.button.return = Volver

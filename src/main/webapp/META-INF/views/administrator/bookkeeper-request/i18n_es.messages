@@ -1,0 +1,14 @@
+administrator.bookkeeper-request.form.label.firmName = Nombre de la compañia
+administrator.bookkeeper-request.form.label.statement = Declaración
+
+administrator.bookkeeper-request.form.label.accepted = Aceptado
+
+administrator.bookkeeper-request.form.button.update = Actualizar
+administrator.bookkeeper-request.form.button.create = Crear
+administrator.bookkeeper-request.form.button.return = Volver
+
+administrator.bookkeeper-request.list.label.firmName = Nombre de la compañia
+administrator.bookkeeper-request.list.label.statement = Declaración
+
+administrator.bookkeeper-request.list.button.return = Volver
+

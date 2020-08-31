@@ -1,0 +1,9 @@
+administrator.customisationParameter.list.label.spamWords = Palabras de spam
+administrator.customisationParameter.list.label.spamThreshold = Umbral de spam
+administrator.customisationParameter.list.label.activitySectors = Sectores de actividad
+
+administrator.customisationParameter.form.label.spamWords = Palabras de spam:
+administrator.customisationParameter.form.label.spamThreshold = Umbral de spam:
+administrator.customisationParameter.form.label.activitySectors = Sectores de actividad:
+administrator.customisationParameter.form.button.update = Actualizar
+administrator.customisationParameter.form.button.return = Volver

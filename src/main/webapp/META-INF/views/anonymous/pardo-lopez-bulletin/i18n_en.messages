@@ -1,0 +1,20 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+anonymous.pardo-lopez-bulletin.list.label.name = Name
+anonymous.pardo-lopez-bulletin.list.label.content = Content
+anonymous.pardo-lopez-bulletin.list.label.moment = Moment
+
+anonymous.pardo-lopez-bulletin.form.label.name = Name
+anonymous.pardo-lopez-bulletin.form.label.content = Content
+anonymous.pardo-lopez-bulletin.form.label.moment = Moment
+
+anonymous.pardo-lopez-bulletin.form.button.create = Create
+anonymous.pardo-lopez-bulletin.form.button.return = Return

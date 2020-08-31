@@ -1,0 +1,34 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+
+entrepreneus.investment.form.label.ticker= Ticker
+entrepreneus.investment.form.label.moment= Moment
+entrepreneus.investment.form.label.round= Round
+entrepreneus.investment.form.label.title= Title
+entrepreneus.investment.form.label.description= Description
+entrepreneus.investment.form.label.money= Money
+entrepreneus.investment.form.label.url= URL
+
+authenticated.accounting-record.form.button.list = Accounting Records
+bookkeeper.investment.form.button.create-accounting-record= Create Accounting Record
+	
+
+entrepreneus.investment.form.button.return= Return
+
+entrepreneus.investment.list.label.ticker= Ticker
+entrepreneus.investment.list.label.title= Title
+entrepreneus.investment.list.label.description= Description
+
+entrepreneus.investment.form.button.create = Create
+
+a.o.error.money = The Money must be in "EUR" o "€"
+a.o.error.plus =  The Money must be > 0
+employer.job.error.ticker = The Ticker must be unique

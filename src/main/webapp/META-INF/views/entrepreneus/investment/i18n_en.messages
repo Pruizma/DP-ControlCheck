@@ -1,0 +1,49 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+
+entrepreneus.investment.form.label.ticker= Ticker
+entrepreneus.investment.form.label.moment= Moment
+entrepreneus.investment.form.label.round= Round
+entrepreneus.investment.form.label.title= Title
+entrepreneus.investment.form.label.description= Description
+entrepreneus.investment.form.label.money= Money
+entrepreneus.investment.form.label.url= URL
+entrepreneus.investment.form.label.moment.m = Moment (This text box will be filled in automatically)
+entrepreneus.investment.form.label.entrepreneur = Entrepreneur of Investment
+
+entrepreneus.accounting-record.form.button.list = Accounting Records
+	
+
+entrepreneus.investment.form.button.return= Return
+
+entrepreneus.investment.list.label.ticker= Ticker
+entrepreneus.investment.list.label.title= Title
+entrepreneus.investment.list.label.description= Description
+
+entrepreneus.investment.form.button.create = Create
+
+entrepreneus.activity.form.button.list = List activities
+
+entrepreneus.investment.form.button.delete = Delete
+entrepreneus.investment.form.button.update = Update
+entrepreneus.investment.form.label.finalMode = Final Mode
+
+a.o.error.money = The Money must be in "EUR" o "€"
+a.o.error.plus =  The Money must be > 0
+entrepreneur.investment.error.ticker = The Ticker must be unique
+entr.investment.error.act.not100 = The sum of the activities is not equal to the investment price
+entr.investment.error.act.empty = The activities cant be empty
+
+
+entrepreneur.investment.spam.part.one = Do not use spam words! The word "
+entrepreneur.investment.spam.part.two = " is not allowed!
+
+entre.invest.application.delete = You cant delete a Investment with a Aplication in process

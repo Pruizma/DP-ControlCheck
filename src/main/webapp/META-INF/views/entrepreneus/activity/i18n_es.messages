@@ -1,0 +1,31 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+entrepreneus.activity.form.label.title = Título
+entrepreneus.activity.form.label.start = Fecha de inicio
+entrepreneus.activity.form.label.end =  Fecha de final
+entrepreneus.activity.form.label.budget = Presupuesto
+
+entrepreneus.activity.list.label.title = Título
+entrepreneus.activity.list.label.start = Fecha de inicio
+entrepreneus.activity.list.label.end = Fecha de final
+entrepreneus.activity.list.label.budget = Presupuesto
+
+entrepreneus.activity.form.button.create = Crear actividad
+entrepreneus.activity.form.button.update = Actualizar
+entrepreneus.activity.form.button.delete = Eliminar
+
+budget.error.message = La suma de los presupuestos de las actividades no puede ser mayor al valor del presupuesto del investment round al que pertenecen
+error.money = El dinero debe tener un formato de "EUR" o "€"
+error.plus = El dinero debe ser mayor a 0
+error.nospam = Ha usado lenguaje ofensivo, por favor no haga eso
+
+
+entrepreneus.activity.form.button.return = Volver

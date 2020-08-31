@@ -1,0 +1,183 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+# master.banner.welcome #######################################################
+
+master.banner.background = #FFE97F 
+
+﻿# master.welcome ##############################################################
+
+master.welcome.title = ¡Bienvenidos!
+master.welcome.text = \
+	Bienvenidos a Acme Stater!  Nunca antes ha sido tan sencillo desarrollar un \
+	proyecto y hacerlo funcionar.
+
+# master.menu #################################################################
+
+master.menu.home = Inicio
+master.menu.sign-up = Registrarse
+master.menu.sign-in = Entrar
+master.menu.sign-out = Salir
+
+# master.menu.anonymous #######################################################
+
+master.menu.anonymous = Anónimo
+master.menu.anonymous.favourite-link-david = Enlace favorito de David
+master.menu.anonymous.favourite-link-fragarroa = Enlace favorito de Fragarroa
+master.menu.anonymous.juapormon-favourite-link = Juapormon enlace favorito
+master.menu.anonymous.gonzalo.favourite-link = Link favorito de Gonzalo
+master.menu.anonymous.luiparlop1-favoriteLink = Enlace favorito de Luiparlop1
+master.menu.anonymous.rmb.favourite-link = Link favorito de Pepe
+
+master.menu.cuevas-bulletin.list = Lista de boletines de Cuevas
+master.menu.cuevas-bulletin.create = Crear un boletin de Cuevas
+master.menu.anonymous.garcia-roales-bulletin-list = Fragarroa - Lista bulletin Garcia Roales
+master.menu.anonymous.garcia-roales-bulletin-create = Fragarroa - Crear bulletin Garcia Roales
+master.menu.anonymous.portero-montano-bulletin-list = PorteroMontañoBoletin
+master.menu.anonymous.portero-montano-bulletin-create = Crear PorteroMontañoBoletin
+master.menu.anonymous.fernandezTorreBulletin.list= Lista FernandezTorreBulletin
+master.menu.anonymous.fernandezTorreBulletin.form= Crear FernandezTorreBulletin
+master.menu.anonymous.pardoLopezBulletin-list = PardoLopezBulletin
+master.menu.anonymous.pardoLopezBulletin-create = Crear PardoLopezBulletin
+master.menu.anonymous.rmb.form= Crear RuizMateosBulletin
+master.menu.anonymous.rmb.list= Lista RuizMateosBulletin
+
+master.menu.anonymous.toolRecord = Registros de herramientas
+master.menu.anonymous.notice-list = Listar Notificaciones
+master.menu.anonymous.technology-records = Grabados tecnológicos
+
+# master.menu.authenticated #######################################################
+
+master.menu.authenticated = Autentificado
+master.menu.authenticated.toolRecord = Registros de herramientas
+master.menu.authenticated.notice-list = Listar notificaciones
+master.menu.authenticated.technology-records = Grabados tecnológicos
+master.menu.authenticated.challenge.list = Lista de retos
+master.menu.authenticated.overture.list = Lista de oberturas
+master.menu.authenticated.inquire-list = Lista de preguntas
+master.menu.authenticated.investment.list = Rondas de Inversiones
+master.menu.authenticated.dforum = Foros de discusión
+master.menu.authenticated.dforum.create = Crear foro de discusión
+
+# master.menu.administrator ###################################################
+
+master.menu.administrator = Administrador
+master.menu.administrator.user-accounts = Cuentas de usuario
+master.menu.administrator.notice = Listar todas las notificaciones
+master.menu.administrator.notice-create = Crear notificación
+master.menu.challenge = Desafios
+master.menu.challenge.list = Lista de Desafios activos
+master.menu.administrator.challenge-link = Lista de desafios activos
+master.menu.administrator.challenge.create = Crear desafío
+master.menu.administrator.overture.create = Crear oberturas
+master.menu.administrator.overture = Lista de oberturas
+master.menu.administrator.toolRecord.list = Lista de registros de herramientas
+master.menu.administrator.toolRecord.create = Crear registros de herramientas
+master.menu.administrator.technology-records.edit = Editar Grabados tecnológicos
+master.menu.administrator.technology-records.create = Crear Grabados tecnológicos
+master.menu.administrator.inquire.list =Lista de preguntas 
+master.menu.administrator.inquire.create= Crear preguntas
+master.menu.administrator.customisationParameter = Parámetros de customización
+master.menu.administrator.shutdown = Parar el sistema
+master.menu.administrator.requests = Solicitudes
+master.menu.administrator.bookkeeper-request.list = Solicitudes para contable
+
+# master.menu.provider ########################################################
+
+master.menu.provider = Proveedor
+master.menu.provider.favourite-link = Enlace favorito
+
+# master.menu.consumer ##########################################################
+
+master.menu.consumer = Consumidor
+master.menu.consumer.favourite-link = Enlace favorito
+
+# master.menu.entrepreneus ##########################################################
+
+master.menu.entrepreneus = Empresario
+master.menu.entrepreneus.create = Crear Inversión
+master.menu.entrepreneus.investment.list = Lista de Inversiones
+master.menu.entrepreneus.application.listMine = Lista de aplicaciones
+
+master.menu.entrepreneus.application.listTicker = Lista de aplicaciones agrupada por Ticker
+master.menu.entrepreneus.application.listFecha = Lista de aplicaciones agrupada por Fecha
+
+master.menu.entrepreneus.application.listPending = Aceptar/Rechazar aplicaciones
+
+# master.menu.investor ##########################################################
+
+master.menu.investor = Inversor
+master.menu.investor.application.listMine = Lista de aplicaciones
+master.menu.investor.application.create = Crear aplicación
+
+# master.menu.bookkeeper ##########################################################
+master.menu.bookkeeper = Bookkeeper 
+master.menu.bookkeeper.investment.list-mine = Lista mis Investments
+master.menu.bookkeeper.investment.list-not-mine = Lista otros Investments
+
+# master.menu.user-account ####################################################
+
+master.menu.user-account = Cuenta
+master.menu.user-account.general-data = Datos generales
+master.menu.user-account.provider = Datos de proveedor
+master.menu.user-account.become-provider = Hazte proveedor
+master.menu.user-account.consumer = Datos de consumidor
+master.menu.user-account.become-consumer = Hazte consumidor
+master.menu.authenticated.update.entrepreneus = Datos de emprendedor
+master.menu.authenticated.create.entrepreneus = Hazte emprendedor
+master.menu.authenticated.update.investor = Datos de inversor
+master.menu.authenticated.create.investor = Hazte inversor
+master.menu.authenticated.create.bookkeeper-request = Petición para hacerse contable
+
+﻿# master.footer ###############################################################
+
+master.footer.title.about = Nosotros
+master.footer.label.company = La empresa
+master.footer.label.license = Licencia
+master.footer.title.social = Social
+master.footer.label.linked-in = Linked-In
+master.footer.label.twitter = Twitter
+master.footer.title.languages = Lenguages
+master.footer.label.english = Inglés
+master.footer.label.spanish = Español
+
+# master.company ##############################################################
+
+master.company.title = La compañía
+master.company.text = \
+	Starter Project, Inc. es una compañía fictícia que proporciona un proyecto \
+	plantilla para los estudiantes de la asignatura Diseño y Pruebas, en el Grado \
+	en Ingeniería del Software de la Universidad de Sevilla.
+master.company.name = Starter Project, Inc.
+master.company.address = Calle, número, Ciudad, Estado, País
+master.company.phone = +000 123 456
+master.company.email = contact@acme.com
+
+# master.license ##############################################################
+
+master.license.title = Licencia
+master.license.text = \
+	Puede usar este sistema de forma completamente gratuita respetando las leyes \
+	que sean aplicables.  No compartimos ninguna información sobre Ud. con ninguna \
+	otra empresa.  Tan sólo usamos tres cookies, a saber: "JSESSIONID" para identificar \
+	su sesión de trabajo, "remember" para mantener su información de autentificación \
+	durante un máximo de 31 días y "language" para almacenar sus preferencias de \
+	lenguage.  Además, almacenamos un ítem llamado "returnStack" en el almacenamiento \
+	local de su navegador para saber dónde tienen que ir algunos botones.
+
+# master.pattern ##############################################################
+
+master.pattern.round =  Las rondas tienen que ser “SEED”, “ANGEL”, “SERIES-A”, “SERIES-B”, “SERIES-C”, or “BRIDGE”
+master.pattern.ticker = El ticker tiene que tener el formato SSS-YY-NNNNNN. "SSS" tienen que ser las primeras letras del Activity Sector y en mayúsculas, e "YY" tienen que ser las dos últimas cifras del año actual
+
+# application.pattern ##############################################################
+
+application.pattern.ticker = El ticker tiene que tener el formato SSS-YY-NNNNNN. "SSS" tienen que ser las primeras letras del Activity Sector y en mayúsculas, e "YY" tienen que ser las dos últimas cifras del año actual
+application.pattern.statement = La declaración tiene que ser "ACCEPTED" o "REJECTED"

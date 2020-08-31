@@ -1,0 +1,21 @@
+entrepreneus.application.list.label.ticker = Identificador
+entrepreneus.application.list.label.statement = Declaración
+entrepreneus.application.list.label.moneyOffer = Oferta de dinero
+
+entrepreneus.application.form.label.ticker = Identificador:
+entrepreneus.application.form.label.moment = Momento:
+entrepreneus.application.form.label.statement = Declaración:
+entrepreneus.application.form.label.justification = Justificación:
+entrepreneus.application.form.label.moneyOffer = Oferta de dinero:
+entrepreneus.application.form.label.investmentTicker = Identificador de la inversión:
+entrepreneus.application.form.label.investorName = Nombre del inversor:
+
+entrepreneus.application.form.button.return = Volver
+
+entrepreneus.application.list.label.moment = Momento de Creación
+entrepreneus.application.form.button.list-fecha = Lista Ordenada
+
+entrepreneus.application.form.button.update = Aceptar/Rechazar
+
+a.o.error.statement = La declaración debe ser "ACCEPTED" o "REJECTED" para cambiar el estado de la aplicación
+a.o.error.compulsoryJustification = Si la declaración es "REJECTED" debe haber una justificación

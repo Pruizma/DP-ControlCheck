@@ -1,0 +1,22 @@
+entrepreneus.application.list.label.ticker = Ticker
+entrepreneus.application.list.label.statement = Statement
+entrepreneus.application.list.label.moneyOffer = Money offer
+
+entrepreneus.application.form.label.ticker = Ticker:
+entrepreneus.application.form.label.moment = Moment:
+entrepreneus.application.form.label.statement = Statement:
+entrepreneus.application.form.label.justification = Justification:
+entrepreneus.application.form.label.moneyOffer = Money offer:
+entrepreneus.application.form.label.investmentTicker = Investment ticker:
+entrepreneus.application.form.label.investorName = Investor name:
+
+entrepreneus.application.form.button.return = Return
+
+entrepreneus.application.list.label.moment = Moment
+
+entrepreneus.application.form.button.list-fecha = Ordered list
+
+entrepreneus.application.form.button.update = Accept/Reject
+
+a.o.error.statement = The statement must be "ACCEPTED" or "REJECTED" in order to change the status of the application
+a.o.error.compulsoryJustification = If the statement is "REJECTED" there must be a justification

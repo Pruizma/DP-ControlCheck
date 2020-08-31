@@ -1,0 +1,32 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.technology-records.list.label.title = Título
+administrator.technology-records.list.label.activitySector = Sector de actividad
+administrator.technology-records.list.label.inventor = Inventor
+administrator.technology-recrds.form.label.description = Descripción
+administrator.technology-records.list.label.website = Página Web
+administrator.technology-records.list.label.email = Correo electrónico
+administrator.technology-records.list.label.openSource = Fuente abierta
+administrator.technology-records.list.label.stars = Estrellas
+
+administrator.technology-records.form.label.title = Título
+administrator.technology-records.form.label.activitySector = Sector de actividad
+administrator.technology-records.form.label.inventor = Inventor
+administrator.technology-recrds.form.label.description = Descripcion
+administrator.technology-records.form.label.website = Página Web
+administrator.technology-records.form.label.email = Correo electrónico
+administrator.technology-records.form.label.openSource = Fuente abierta
+administrator.technology-records.form.label.stars = Estrellas
+	
+administrator.technology-records.form.button.create = Crear
+administrator.technology-records.form.button.update = Actualizar
+administrator.technology-records.form.button.delete = Borrar
+administrator.technology-records.form.button.return = Volver

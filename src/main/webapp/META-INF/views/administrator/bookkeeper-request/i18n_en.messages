@@ -1,0 +1,14 @@
+administrator.bookkeeper-request.form.label.firmName = Firm Name
+administrator.bookkeeper-request.form.label.statement = Statement
+
+administrator.bookkeeper-request.form.label.accepted = Accepted
+
+administrator.bookkeeper-request.form.button.update = Update
+administrator.bookkeeper-request.form.button.create = Create
+administrator.bookkeeper-request.form.button.return = Return
+
+administrator.bookkeeper-request.list.label.firmName = Firm Name
+administrator.bookkeeper-request.list.label.statement = Statement
+
+administrator.bookkeeper-request.list.button.return = Return
+

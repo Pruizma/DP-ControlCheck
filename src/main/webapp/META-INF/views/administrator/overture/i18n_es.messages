@@ -1,0 +1,34 @@
+# i18n_es.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+authenticated.overture.form.label.title=  Titulo
+authenticated.overture.form.label.moment= Momento
+authenticated.overture.form.label.deadline= Tiempo Limite
+authenticated.overture.form.label.description= Descripcion
+authenticated.overture.form.label.minMoney= Dinero Minimo
+authenticated.overture.form.label.maxMoney= Dinero Maximo
+authenticated.overture.form.label.email= Correo
+
+
+authenticated.overture.list.label.title= Titulo
+authenticated.overture.list.label.deadline= Tiempo Limete
+authenticated.overture.list.label.description= Descipcion
+
+authenticated.overture.form.button.return= Volver
+
+administrator.overture.form.button.update = Actualizar
+administrator.overture.form.button.delete = Eliminar
+administrator.overture.form.button.create = Crear
+
+a.o.error.bigger = el dinero maximo debe ser mayor al minimo
+a.o.error.max = El dinero tiene que ser "EUR" o "€"
+a.o.error.min = El dinero tiene que ser "EUR" o "€"
+a.o.error.deadline.week = La fecha limite tiene que tener un margen de una semana como mínimo
+a.o.error.deadline.passed = La fecha limite tiene que ser en el futuro

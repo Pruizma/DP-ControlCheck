@@ -1,0 +1,184 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+# master.banner.welcome #######################################################
+
+master.banner.background = #FFE97F 
+
+# master.welcome ##############################################################
+
+master.welcome.title = Welcome!
+master.welcome.text = \
+	Welcome to Starter Project! Never before has it bee easier to get your \
+	project up and running!
+
+# master.menu #################################################################
+
+master.menu.home = Home
+master.menu.sign-up = Sign up
+master.menu.sign-in = Sign in
+master.menu.sign-out = Sign out
+
+# master.menu.anonymous #######################################################
+
+master.menu.anonymous = Anonymous
+master.menu.anonymous.favourite-link-david = David's favourite link
+master.menu.anonymous.favourite-link-fragarroa = Fragarroa's favourite link
+master.menu.anonymous.juapormon-favourite-link = Juapormon's link
+master.menu.anonymous.gonzalo.favourite-link = Gonzalo's favourite link
+master.menu.anonymous.luiparlop1-favoriteLink = Luiparlop1's link
+master.menu.anonymous.rmb.favourite-link = Pepe's favourite link
+
+master.menu.cuevas-bulletin.list = Cuevas bulletin list
+master.menu.cuevas-bulletin.create = Create a Cuevas bulletin
+master.menu.anonymous.garcia-roales-bulletin-list = Fragarroa - Garcia Roales's bulletin list
+master.menu.anonymous.garcia-roales-bulletin-create = Fragarroa - Garcia Roales's bulletin create
+master.menu.anonymous.portero-montano-bulletin-list = PorteroMontañoBulletin
+master.menu.anonymous.portero-montano-bulletin-create = Create PorteroMontañoBulletin
+master.menu.anonymous.fernandezTorreBulletin.list= List FernandezTorreBulletin
+master.menu.anonymous.fernandezTorreBulletin.form= Create FernandezTorreBulletin
+master.menu.anonymous.pardoLopezBulletin-list = PardoLopezBulletin
+master.menu.anonymous.pardoLopezBulletin-create = Create PardoLopezBulletin
+master.menu.anonymous.rmb.form= Create RuizMateosBulletin
+master.menu.anonymous.rmb.list= List RuizMateosBulletin
+
+master.menu.anonymous.toolRecord = Tool records
+master.menu.anonymous.notice-list = List notices
+master.menu.anonymous.technology-records = Technology records
+
+# master.menu.authenticated #######################################################
+
+master.menu.authenticated = Authenticated
+master.menu.authenticated.toolRecord = Tool records
+master.menu.authenticated.notice-list = List notices
+master.menu.authenticated.technology-records = Technology records
+master.menu.authenticated.challenge.list = Challenge list
+master.menu.authenticated.overture.list = Overture list
+master.menu.authenticated.inquire-list = Inquire list
+master.menu.authenticated.investment.list = Investment Rounds
+master.menu.authenticated.dforum = Disccusion Forums
+master.menu.authenticated.dforum.create = Create Discussion Forum
+
+# master.menu.administrator ###################################################
+
+master.menu.administrator = Administrator
+master.menu.administrator.user-accounts = User accounts
+master.menu.administrator.notice = List all notices
+master.menu.administrator.notice-create = Create notice
+master.menu.challenge = Challenges
+master.menu.challenge.list = List of active Challenges
+master.menu.administrator.challenge-link = List of active challenges
+master.menu.administrator.challenge.create = Create Challenge
+master.menu.administrator.overture.create = Create Overture
+master.menu.administrator.overture = List of Overtures
+master.menu.administrator.toolRecord.list = Tool records list
+master.menu.administrator.toolRecord.create = Tool record create
+master.menu.administrator.technology-records.edit = Edit Technology records
+master.menu.administrator.technology-records.create = Create Technology records
+master.menu.administrator.inquire.list = Inquire list
+master.menu.administrator.inquire.create = Inquire create
+master.menu.administrator.customisationParameter = Customisation parameters
+master.menu.administrator.shutdown = Shut down
+master.menu.administrator.requests = Requests
+master.menu.administrator.bookkeeper-request.list = Bookkeeper Requests
+
+# master.menu.provider ########################################################
+
+master.menu.provider = Provider
+master.menu.provider.favourite-link = Favourite link
+
+# master.menu.consumer ##########################################################
+
+master.menu.consumer = Consumer
+master.menu.consumer.favourite-link = Favourite link
+
+# master.menu.entrepreneus ##########################################################
+
+master.menu.entrepreneus = Entrepreneus
+master.menu.entrepreneus.create = Create Investment
+master.menu.entrepreneus.investment.list = Investment List
+master.menu.entrepreneus.application.listMine = Application list
+
+master.menu.entrepreneus.application.listTicker = Application List Grouped By Ticker
+master.menu.entrepreneus.application.listFecha = Application List Grouped By Moment  
+
+master.menu.entrepreneus.application.listPending = Accept/Reject applications
+
+# master.menu.investor ##########################################################
+
+master.menu.investor = Investor
+master.menu.investor.application.listMine = List applications
+master.menu.investor.application.create = Create application
+
+# master.menu.bookkeeper ##########################################################
+master.menu.bookkeeper = Bookkeeper 
+master.menu.bookkeeper.investment.list-mine = List mine Investments
+master.menu.bookkeeper.investment.list-not-mine = List other Investments
+
+# master.menu.user-account ####################################################
+
+master.menu.user-account = Account
+master.menu.user-account.general-data = General data
+master.menu.user-account.provider = Provider data
+master.menu.user-account.become-provider = Become a provider
+master.menu.user-account.consumer = Consumer data
+master.menu.user-account.become-consumer = Become a consumer
+master.menu.authenticated.update.entrepreneus = Entrepreneus data
+master.menu.authenticated.create.entrepreneus = Become a entrepreneus
+master.menu.authenticated.update.investor = Investor data
+master.menu.authenticated.create.investor = Become a investor
+master.menu.authenticated.create.bookkeeper-request = Request to become a bookkeeper
+
+
+# master.footer ###############################################################
+
+master.footer.title.about = About us
+master.footer.label.company = Company
+master.footer.label.license = License
+master.footer.title.social = Social
+master.footer.label.linked-in = Linked-In
+master.footer.label.twitter = Twitter
+master.footer.title.languages = Languages
+master.footer.label.english = English
+master.footer.label.spanish = Spanish
+
+# master.company ##############################################################
+
+master.company.title = La compañía
+master.company.text = \
+	Starter Project, Inc. is a fictitious fictitious company that provides a \
+	starter project for the students of the Design and Testing subject of the \
+	Software Engineering Curriculum of the University of Sevilla.
+master.company.name = Starter Project, Inc.
+master.company.address = Number Street, City, State, Country
+master.company.phone = +000 123 456
+master.company.email = contact@acme.com
+
+# master.license ##############################################################
+
+master.license.title = License
+master.license.text = \
+	You may use this system free of charge, as long as you carefully observe the \
+	existing applicable laws.  Please, note that we do not share any information \
+	about you with any other company.  We only use three cookies, namely: \
+	"JSESSIONID" to identify your work session, "remember" to let you authenticate \
+	automatically for a maximum of 31 days, and "language" to store your language \
+	preferences. Additionally, we store an item called "returnStack" in your browser's \
+	local storage to keep track of the document to which some buttons must return.
+
+# master.pattern ##############################################################
+
+master.pattern.round =  The kind of an investment round can be either “SEED”, “ANGEL”, “SERIES-A”, “SERIES-B”, “SERIES-C”, or “BRIDGE”.
+master.pattern.ticker = Ticker formatter must be SSS-YY-NNNNNN. "SSS" must be the initial letters of the Activity Sector and in capital letters, and "YY" must be the last 2 digits of the current year
+
+# application.pattern ##############################################################
+
+application.pattern.ticker = Ticker formatter must be SSS-YY-NNNNNN. "SSS" must be the initial letters of the Activity Sector and in capital letters, and "YY" must be the last 2 digits of the current year
+application.pattern.statement = The statement must be either "ACCEPTED" or "REJECTED"
