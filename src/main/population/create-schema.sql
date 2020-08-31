@@ -58,6 +58,14 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `banner` (
+       `id` integer not null,
+        `version` integer not null,
+        `name` varchar(255),
+        `picture` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `bookkeeper` (
        `id` integer not null,
         `version` integer not null,
@@ -95,12 +103,15 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `consumer` (
+    create table `credit_card` (
        `id` integer not null,
         `version` integer not null,
-        `user_account_id` integer,
-        `company` varchar(255),
-        `sector` varchar(255),
+        `brand` varchar(255),
+        `credit_card_number` varchar(255),
+        `cvv` varchar(255),
+        `expiration_date` datetime(6),
+        `holder` varchar(255),
+        `banner_id` integer,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -266,15 +277,6 @@
         primary key (`id`)
     ) engine=InnoDB;
 
-    create table `provider` (
-       `id` integer not null,
-        `version` integer not null,
-        `user_account_id` integer,
-        `company` varchar(255),
-        `sector` varchar(255),
-        primary key (`id`)
-    ) engine=InnoDB;
-
     create table `ruiz_mateos_bulletin` (
        `id` integer not null,
         `version` integer not null,
@@ -392,10 +394,10 @@
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
 
-    alter table `consumer` 
-       add constraint FK_6cyha9f1wpj0dpbxrrjddrqed 
-       foreign key (`user_account_id`) 
-       references `user_account` (`id`);
+    alter table `credit_card` 
+       add constraint `FKa4pbn9v8sv66p46fsrke8ow89` 
+       foreign key (`banner_id`) 
+       references `banner` (`id`);
 
     alter table `discussion_forum` 
        add constraint `FKrclodsb01yx8qf4lkee4d3oas` 
@@ -441,8 +443,3 @@
        add constraint `FKr2om5f6tefk2fg0fyl53q2kgd` 
        foreign key (`discussion_forum_id`) 
        references `discussion_forum` (`id`);
-
-    alter table `provider` 
-       add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 
-       foreign key (`user_account_id`) 
-       references `user_account` (`id`);

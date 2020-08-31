@@ -89,15 +89,10 @@ master.menu.administrator.shutdown = Parar el sistema
 master.menu.administrator.requests = Solicitudes
 master.menu.administrator.bookkeeper-request.list = Solicitudes para contable
 
-# master.menu.provider ########################################################
 
-master.menu.provider = Proveedor
-master.menu.provider.favourite-link = Enlace favorito
 
-# master.menu.consumer ##########################################################
 
-master.menu.consumer = Consumidor
-master.menu.consumer.favourite-link = Enlace favorito
+
 
 # master.menu.entrepreneus ##########################################################
 
