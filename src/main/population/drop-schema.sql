@@ -39,9 +39,9 @@
        drop 
        foreign key `FKrkmyfaktfktoo2v26a9qu4ebb`;
 
-    alter table `consumer` 
+    alter table `credit_card` 
        drop 
-       foreign key FK_6cyha9f1wpj0dpbxrrjddrqed;
+       foreign key `FKa4pbn9v8sv66p46fsrke8ow89`;
 
     alter table `discussion_forum` 
        drop 
@@ -79,10 +79,6 @@
        drop 
        foreign key `FKr2om5f6tefk2fg0fyl53q2kgd`;
 
-    alter table `provider` 
-       drop 
-       foreign key FK_b1gwnjqm6ggy9yuiqm0o4rlmd;
-
     drop table if exists `accounting_record`;
 
     drop table if exists `activity`;
@@ -95,13 +91,15 @@
 
     drop table if exists `authenticated`;
 
+    drop table if exists `banner`;
+
     drop table if exists `bookkeeper`;
 
     drop table if exists `bookkeeper_request`;
 
     drop table if exists `challenge`;
 
-    drop table if exists `consumer`;
+    drop table if exists `credit_card`;
 
     drop table if exists `cuevas_bulletin`;
 
@@ -132,8 +130,6 @@
     drop table if exists `pardo_lopez_bulletin`;
 
     drop table if exists `portero_montano_bulletin`;
-
-    drop table if exists `provider`;
 
     drop table if exists `ruiz_mateos_bulletin`;
 

@@ -18,7 +18,7 @@ public interface AuthenticatedAccountingRecordRepository extends AbstractReposit
 	@Query("select a from AccountingRecord a where a.status = 'PUBLISHED'")
 	Collection<AccountingRecord> findMany();
 
-	@Query("select a from AccountingRecord a where a.investment.id =?1 and a.status = 'PUBLISHED'")
+	@Query("select a from AccountingRecord a where a.investment.id =?1 and a.status = acme.entities.accountingRecords.Status.PUBLISHED")
 	Collection<AccountingRecord> findManyByInvestmentId(int id);
 
 }
