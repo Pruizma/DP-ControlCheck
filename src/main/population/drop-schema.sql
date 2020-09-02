@@ -79,6 +79,10 @@
        drop 
        foreign key `FKr2om5f6tefk2fg0fyl53q2kgd`;
 
+    alter table `offer` 
+       drop 
+       foreign key `FKsw0w3bk6u9fby3rbg0fsf2ija`;
+
     drop table if exists `accounting_record`;
 
     drop table if exists `activity`;
@@ -124,6 +128,8 @@
     drop table if exists `message`;
 
     drop table if exists `notice`;
+
+    drop table if exists `offer`;
 
     drop table if exists `overture`;
 

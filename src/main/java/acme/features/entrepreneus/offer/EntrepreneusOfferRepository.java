@@ -19,7 +19,7 @@ public interface EntrepreneusOfferRepository extends AbstractRepository {
 	@Query("select o from Offer o where o.id = ?1 ")
 	Offer findOneById(int id);
 
-	@Query("select a from Application a where a.id= ?1 and a.statement='PENDING' and not exists(select o from Offer o where o.application.id = ?1)")
+	@Query("select a from Application a where a.id= ?1 and a.statement='PENDING' and a.investment.filing!='' and a.investment.filing is not null and not exists(select o from Offer o where o.application.id = ?1)")
 	Application findOneByIdNoOffer(int id);
 
 }
