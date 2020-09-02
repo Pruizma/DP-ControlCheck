@@ -4,6 +4,7 @@ package acme.features.investor.offer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.investments.Application;
 import acme.entities.offer.Offer;
 import acme.entities.roles.Investor;
 import acme.framework.components.Errors;
@@ -29,7 +30,7 @@ public class InvestorOfferCreateService implements AbstractCreateService<Investo
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		request.bind(entity, errors);
+		request.bind(entity, errors, "application");
 	}
 
 	@Override
@@ -37,13 +38,19 @@ public class InvestorOfferCreateService implements AbstractCreateService<Investo
 		assert request != null;
 		assert entity != null;
 		assert model != null;
+		int applicationId = entity.getApplication().getId();
 		request.unbind(entity, model, "title", "link", "passProt", "pass");
+		model.setAttribute("id", applicationId);
 	}
 
 	@Override
 	public Offer instantiate(final Request<Offer> request) {
 		Offer result;
 		result = new Offer();
+		int applicationId = request.getModel().getInteger("id");
+		Application application = this.repository.findApplicationById(applicationId);
+		result.setApplication(application);
+		result.setPassProt(false);
 		return result;
 	}
 
@@ -53,27 +60,47 @@ public class InvestorOfferCreateService implements AbstractCreateService<Investo
 		assert entity != null;
 		assert errors != null;
 		if (!errors.hasErrors("passProt")) {
+			boolean hasToBeFalse = true;
+			if (entity.getLink() == "" && entity.getPassProt() == true) {
+				hasToBeFalse = false;
+			}
+			if (request.getLocale().toLanguageTag().equals("en")) {
+				errors.state(request, hasToBeFalse, "passProt", "You have to write a link in order enable Password-Protected");
+			} else {
+				errors.state(request, hasToBeFalse, "passProt", "Tienes que escribir un link para poder habilitar Password-Protected");
+			}
+		}
+		if (!errors.hasErrors("passProt")) {
 			boolean hasToBeTrue = true;
-			if (request.getModel().getCurrent().get("link").toString().equals("") && request.getModel().getCurrent().get("passProt") != null) {
+			if (entity.getPassProt() == false && !entity.getPass().isEmpty()) {
 				hasToBeTrue = false;
 			}
-			errors.state(request, hasToBeTrue, "passProt", "You cannot get your link password-protected if you do not have a link");
+			if (request.getLocale().toLanguageTag().equals("en")) {
+				errors.state(request, hasToBeTrue, "passProt", "You have to enable Password-Protected in order to write a Password");
+			} else {
+				errors.state(request, hasToBeTrue, "passProt", "Tienes que habilitar Password-Protected para poder escribir una Contraseña");
+			}
 		}
 		if (!errors.hasErrors("pass")) {
 			boolean hasToBeTrue = true;
-			if (request.getModel().getCurrent().get("link").toString().equals("") && !!request.getModel().getCurrent().get("pass").equals("")) {
+			if (entity.getPassProt() == true && entity.getPass().isEmpty()) {
 				hasToBeTrue = false;
 			}
-			errors.state(request, hasToBeTrue, "pass", "You cannot write a password if you do not have a link");
+			if (request.getLocale().toLanguageTag().equals("en")) {
+				errors.state(request, hasToBeTrue, "pass", "You have to write a Password if Password-Protected is enabled");
+			} else {
+				errors.state(request, hasToBeTrue, "pass", "Tienes que escribir una Contraseña si el campo Password-Protected está habilitado");
+			}
 		}
-		//falta que no se pueda poner pass si passProtect no esta marcado y viceversa
-
 	}
 
 	@Override
 	public void create(final Request<Offer> request, final Offer entity) {
 		assert request != null;
 		assert entity != null;
+		int applicationId = request.getModel().getInteger("id");
+		Application application = this.repository.findApplicationById(applicationId);
+		entity.setApplication(application);
 		this.repository.save(entity);
 	}
 }

@@ -2,10 +2,13 @@
 package acme.entities.offer;
 
 import javax.persistence.Entity;
+import javax.persistence.OneToOne;
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 
 import org.hibernate.validator.constraints.URL;
 
+import acme.entities.investments.Application;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -26,5 +29,9 @@ public class Offer extends DomainEntity {
 	private Boolean				passProt;
 
 	private String				pass;
+
+	@Valid
+	@OneToOne(optional = false)
+	private Application			application;
 
 }

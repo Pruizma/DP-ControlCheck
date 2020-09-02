@@ -28,9 +28,14 @@ public class InvestorApplicationShowService implements AbstractShowService<Inves
 		assert request != null;
 		assert entity != null;
 		assert model != null;
+		boolean offer = false;
+		if (this.repository.findOneByIdNoOffer(request.getModel().getInteger("id")) != null) {
+			offer = true;
+		}
 		request.unbind(entity, model, "ticker", "moment", "statement", "justification", "moneyOffer");
 		model.setAttribute("investmentTicker", entity.getInvestment().getTicker());
 		model.setAttribute("investorName", entity.getInvestor().getUserAccount().getUsername());
+		model.setAttribute("offer", offer);
 	}
 
 	@Override
