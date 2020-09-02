@@ -93,6 +93,17 @@ public class InvestorApplicationCreateService implements AbstractCreateService<I
 			boolean isEquals = newTicker.equals(invTicker);
 			errors.state(request, isEquals, "ticker", "i.a.error.activityTicker");
 		}
+		// Formato en €
+		if (!errors.hasErrors("moneyOffer")) {
+			boolean moneyCurrencyMax = entity.getMoneyOffer().getCurrency().equals("EUR") || entity.getMoneyOffer().getCurrency().equals("EUROS") || entity.getMoneyOffer().getCurrency().equals("€");
+			errors.state(request, moneyCurrencyMax, "moneyOffer", "a.o.error.money");
+		}
+
+		// Mínimo debe ser mayor que cero
+		if (!errors.hasErrors("moneyOffer")) {
+			boolean minBiggerThanZero = entity.getMoneyOffer().getAmount() >= 0;
+			errors.state(request, minBiggerThanZero, "moneyOffer", "a.o.error.plus");
+		}
 	}
 
 	@Override
