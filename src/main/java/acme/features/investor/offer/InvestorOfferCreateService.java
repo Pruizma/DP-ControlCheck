@@ -4,6 +4,7 @@ package acme.features.investor.offer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.PasswordChecker;
 import acme.entities.investments.Application;
 import acme.entities.offer.Offer;
 import acme.entities.roles.Investor;
@@ -81,6 +82,16 @@ public class InvestorOfferCreateService implements AbstractCreateService<Investo
 				errors.state(request, hasToBeTrue, "passProt", "Tienes que habilitar Password-Protected para poder escribir una Contraseña");
 			}
 		}
+
+		if (!entity.getPass().isEmpty()) {
+			PasswordChecker pc = new PasswordChecker(); // clase implementada en components
+			if (request.getLocale().toLanguageTag().equals("en")) { // longitud, letras, digitos, signos de puntuacion.
+				errors.state(request, pc.PasswordCheck(entity.getPass(), 10, 2, 5, 3), "pass", "Incorrect Pattern");
+			} else {
+				errors.state(request, pc.PasswordCheck(entity.getPass(), 10, 2, 5, 3), "pass", "Patron incorrecto");
+			}
+		}
+
 		if (!errors.hasErrors("pass")) {
 			boolean hasToBeTrue = true;
 			if (entity.getPassProt() == true && entity.getPass().isEmpty()) {
