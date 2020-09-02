@@ -104,11 +104,14 @@ master.menu.entrepreneus.application.listFecha = Application List Grouped By Mom
 
 master.menu.entrepreneus.application.listPending = Accept/Reject applications
 
+master.menu.entrepreneus.offer.list = List applications with offer
+
 # master.menu.investor ##########################################################
 
 master.menu.investor = Investor
 master.menu.investor.application.listMine = List applications
 master.menu.investor.application.create = Create application
+master.menu.investor.application.list-no-offer = List pending application with no offer
 
 # master.menu.bookkeeper ##########################################################
 master.menu.bookkeeper = Bookkeeper 

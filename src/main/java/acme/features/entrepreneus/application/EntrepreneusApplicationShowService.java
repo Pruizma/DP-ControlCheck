@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.investments.Application;
+import acme.entities.offer.Offer;
 import acme.entities.roles.Entrepreneus;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
@@ -28,9 +29,18 @@ public class EntrepreneusApplicationShowService implements AbstractShowService<E
 		assert request != null;
 		assert entity != null;
 		assert model != null;
+		boolean offer = false;
+		if (this.repository.findOneByIdNoOffer(request.getModel().getInteger("id")) != null) {
+			offer = true;
+		}
+		int id = request.getModel().getInteger("id");
+		Offer o = this.repository.findOneByApplicationId(id);
+		int offerid = o.getId();
 		request.unbind(entity, model, "ticker", "moment", "statement", "justification", "moneyOffer");
 		model.setAttribute("investmentTicker", entity.getInvestment().getTicker());
 		model.setAttribute("investorName", entity.getInvestor().getUserAccount().getUsername());
+		model.setAttribute("offer", offer);
+		model.setAttribute("offerid", offerid);
 	}
 
 	@Override

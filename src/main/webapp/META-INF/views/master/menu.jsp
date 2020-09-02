@@ -93,7 +93,7 @@
 			<acme:menu-suboption code="master.menu.entrepreneus.application.listFecha" action="/entrepreneus/application/list-fecha" />
 	    <acme:menu-suboption code="master.menu.entrepreneus.application.listTicker" action="/entrepreneus/application/list-ticker" />
 			<acme:menu-suboption code="master.menu.entrepreneus.application.listPending" action="/entrepreneus/application/list-pending" />
-
+			<acme:menu-suboption code="master.menu.entrepreneus.offer.list" action="/entrepreneus/application/list-offer" />
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.investor" access="hasRole('Investor')">

@@ -30,6 +30,8 @@ public class Offer extends DomainEntity {
 
 	private String				pass;
 
+	private Boolean				aux;
+
 	@Valid
 	@OneToOne(optional = false)
 	private Application			application;

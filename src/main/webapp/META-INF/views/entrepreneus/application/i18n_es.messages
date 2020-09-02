@@ -9,6 +9,7 @@ entrepreneus.application.form.label.justification = Justificación:
 entrepreneus.application.form.label.moneyOffer = Oferta de dinero:
 entrepreneus.application.form.label.investmentTicker = Identificador de la inversión:
 entrepreneus.application.form.label.investorName = Nombre del inversor:
+entrepreneus.application.form.button.offer = Oferta
 
 entrepreneus.application.form.button.return = Volver
 

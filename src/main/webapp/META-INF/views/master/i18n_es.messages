@@ -107,11 +107,14 @@ master.menu.entrepreneus.application.listFecha = Lista de aplicaciones agrupada 
 
 master.menu.entrepreneus.application.listPending = Aceptar/Rechazar aplicaciones
 
+master.menu.entrepreneus.offer.list = Listar aplicaciones con oferta
+
 # master.menu.investor ##########################################################
 
 master.menu.investor = Inversor
 master.menu.investor.application.listMine = Lista de aplicaciones
 master.menu.investor.application.create = Crear aplicación
+master.menu.investor.application.list-no-offer = Aplicaciones pendientes sin oferta
 
 # master.menu.bookkeeper ##########################################################
 master.menu.bookkeeper = Bookkeeper 

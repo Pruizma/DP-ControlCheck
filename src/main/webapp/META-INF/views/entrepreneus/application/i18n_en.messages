@@ -9,6 +9,8 @@ entrepreneus.application.form.label.justification = Justification:
 entrepreneus.application.form.label.moneyOffer = Money offer:
 entrepreneus.application.form.label.investmentTicker = Investment ticker:
 entrepreneus.application.form.label.investorName = Investor name:
+entrepreneus.application.form.button.offer = Offer
+
 
 entrepreneus.application.form.button.return = Return
 
