@@ -37,10 +37,12 @@ public class Inquire extends DomainEntity {
 
 	@NotBlank
 	private String				description;
-
+	
+	@NotNull
 	@Valid
 	private Money				moneyMin;
 
+	@NotNull
 	@Valid
 	private Money				moneyMax;
 
