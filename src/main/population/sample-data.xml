@@ -748,4 +748,12 @@
 		<property name="picture" value="https://i.pinimg.com/originals/fc/29/ce/fc29ce3970c7d8ca03fcc45a6d817e8b.jpg" />
 	</bean>
 	
+	<!-- Offers -->
+	<bean name="offer01" class="acme.entities.offer.Offer">
+		<property name="title" value="offer 01"/>
+		<property name="link" value="http://www.wikipedia.com"/>
+		<property name="passProt" value="true"/>
+		<property name="pass" value="no12345..."/>
+		<property name="application" ref="application03"/>
+	</bean>
 </beans>

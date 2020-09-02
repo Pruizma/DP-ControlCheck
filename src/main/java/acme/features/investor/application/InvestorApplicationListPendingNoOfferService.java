@@ -1,5 +1,5 @@
 
-package acme.features.investor.offer;
+package acme.features.investor.application;
 
 import java.util.Collection;
 
@@ -14,10 +14,10 @@ import acme.framework.entities.Principal;
 import acme.framework.services.AbstractListService;
 
 @Service
-public class InvestorApplicationOfferListPendingNoOfferService implements AbstractListService<Investor, Application> {
+public class InvestorApplicationListPendingNoOfferService implements AbstractListService<Investor, Application> {
 
 	@Autowired
-	InvestorApplicationOfferRepository repository;
+	InvestorApplicationRepository repository;
 
 
 	@Override

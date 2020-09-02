@@ -5,9 +5,6 @@
 	"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 
 <tiles-definitions>
-	<definition name="investor/offer/list" extends="master">
-		<put-attribute name="body" type="template" value="../investor/offer/list.jsp" />
-	</definition>
 	<definition name="investor/offer/form" extends="master">
 		<put-attribute name="body" type="template" value="../investor/offer/form.jsp" />
 	</definition>

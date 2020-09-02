@@ -13,6 +13,7 @@
 		<acme:form-money code="entrepreneus.application.form.label.moneyOffer" path="moneyOffer" />
 		<acme:form-money code="entrepreneus.application.form.label.investmentTicker" path="investmentTicker" />
 		<acme:form-money code="entrepreneus.application.form.label.investorName" path="investorName" />
+		<acme:form-submit test="${offer == true }" code="entrepreneus.application.form.button.offer" action="http://localhost:8080/acme-incubator/entrepreneus/offer/show?id=${offerid}" method= "get"  />
 		<acme:form-submit code="entrepreneus.application.form.button.update" action = "/entrepreneus/application/update?id=${id}"/>
 		<acme:form-return code="entrepreneus.application.form.button.return" />
 	</acme:form>

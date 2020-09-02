@@ -10,3 +10,8 @@ investor.application.form.label.moneyOffer = Money offer:
 investor.application.form.label.investmentTicker = Investment ticker:
 investor.application.form.label.investorName = Investor name:
 investor.application.form.button.return = Return
+investor.offer.form.button.create = Create offer
+
+i.a.error.uniqueTicker = The ticker introduced must be unique
+i.a.error.fecha = The second part of the ticker must be the last 2 digits of the current year
+i.a.error.activityTicker = The first part of the ticker must be the first 3 letters of the activity sector of the Investment Round
