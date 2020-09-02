@@ -16,6 +16,3 @@ entrepreneus.application.list.label.moment = Momento de Creación
 entrepreneus.application.form.button.list-fecha = Lista Ordenada
 
 entrepreneus.application.form.button.update = Aceptar/Rechazar
-
-a.o.error.statement = La declaración debe ser "ACCEPTED" o "REJECTED" para cambiar el estado de la aplicación
-a.o.error.compulsoryJustification = Si la declaración es "REJECTED" debe haber una justificación

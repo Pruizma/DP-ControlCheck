@@ -51,13 +51,21 @@ public class EntrepreneusApplicationUpdateService implements AbstractUpdateServi
 		if (!errors.hasErrors("statement")) {
 			if (entity.getStatement().equals("PENDING")) {
 				boolean statement = false;
-				errors.state(request, statement, "statement", "a.o.error.statement");
+				if (request.getLocale().toLanguageTag().equals("en")) {
+					errors.state(request, statement, "statement", "The statement must be \"ACCEPTED\" or \"REJECTED\" in order to change the status of the application");
+				} else {
+					errors.state(request, statement, "statement", "La declaración debe ser \"ACCEPTED\" o \"REJECTED\" para cambiar el estado de la aplicación");
+				}
 			}
 		}
 		if (!errors.hasErrors("justification")) {
 			if (entity.getStatement().equals("REJECTED")) {
 				boolean compulsoryJustification = !entity.getJustification().isEmpty();
-				errors.state(request, compulsoryJustification, "justification", "a.o.error.compulsoryJustification");
+				if (request.getLocale().toLanguageTag().equals("en")) {
+					errors.state(request, compulsoryJustification, "justification", "If the statement is \"REJECTED\" there must be a justification");
+				} else {
+					errors.state(request, compulsoryJustification, "justification", "Si la declaración es \"REJECTED\" debe haber una justificación");
+				}
 			}
 		}
 	}

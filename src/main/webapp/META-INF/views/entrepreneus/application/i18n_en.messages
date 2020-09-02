@@ -17,6 +17,3 @@ entrepreneus.application.list.label.moment = Moment
 entrepreneus.application.form.button.list-fecha = Ordered list
 
 entrepreneus.application.form.button.update = Accept/Reject
-
-a.o.error.statement = The statement must be "ACCEPTED" or "REJECTED" in order to change the status of the application
-a.o.error.compulsoryJustification = If the statement is "REJECTED" there must be a justification
