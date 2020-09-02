@@ -39,7 +39,9 @@
 	<jstl:if test="${command != 'create' }">
 	<acme:form-textbox code="entrepreneus.investment.form.label.entrepreneur" path="entrepreneurName" readonly="true"/>
 	</jstl:if>
+	<jstl:if test="${command == 'show' || command == 'update' }">	
 	<acme:form-moment readonly="true" code="entrepreneus.investment.form.label.moment" path="moment"/>
+	</jstl:if>
 	<acme:form-textbox code="entrepreneus.investment.form.label.round" path="round"/>
 	<acme:form-textbox code="entrepreneus.investment.form.label.title" path="title"/>
 	<acme:form-textarea code="entrepreneus.investment.form.label.description" path="description"/>
