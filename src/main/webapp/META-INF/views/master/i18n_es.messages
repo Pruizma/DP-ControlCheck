@@ -65,10 +65,12 @@ master.menu.authenticated.inquire-list = Lista de preguntas
 master.menu.authenticated.investment.list = Rondas de Inversiones
 master.menu.authenticated.dforum = Foros de discusión
 master.menu.authenticated.dforum.create = Crear foro de discusión
+master.menu.authenticated.application.list-no-offer = Listar aplicaciones sin oferta
 
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
+master.menu.administrator.dashboard = Tablero
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.notice = Listar todas las notificaciones
 master.menu.administrator.notice-create = Crear notificación

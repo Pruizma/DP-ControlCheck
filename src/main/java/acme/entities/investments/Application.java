@@ -15,6 +15,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 
+import acme.entities.offer.Offer;
 import acme.entities.roles.Investor;
 import acme.framework.datatypes.Money;
 import acme.framework.entities.DomainEntity;
@@ -56,4 +57,8 @@ public class Application extends DomainEntity {
 	@Valid
 	@ManyToOne(optional = false)
 	private Investor			investor;
+
+	@Valid
+	@OneToOne(optional = true)
+	private Offer				offer;
 }

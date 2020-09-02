@@ -509,6 +509,7 @@
 		<property name="money" value="11.0€" />
 		<property name="finalMode" value="true" />
 		<property name="url" value="https://www.youtube.com/watch?v=J28D_9JpuJM" />
+		<property name="filing" value="Control Check 01" />
 		<property name="entrepreneus" ref="entrepreneus1Entrepreneus" />
 		<property name="investor" ref="investor01Investor" />
 	</bean>
@@ -521,6 +522,7 @@
 		<property name="money" value="12.0€" />
 		<property name="finalMode" value="false" />
 		<property name="url" value="https://www.youtube.com/watch?v=J28D_9JpuJM" />
+		<property name="filing" value="Control Check 04" />
 		<property name="entrepreneus" ref="entrepreneus2Entrepreneus" />
 		<property name="investor" ref="investor02Investor" />
 	</bean>
@@ -533,6 +535,7 @@
 		<property name="money" value="13.0€" />
 		<property name="finalMode" value="false" />
 		<property name="url" value="https://www.youtube.com/watch?v=J28D_9JpuJM" />
+		<property name="filing" value="Control Check 03" />
 		<property name="entrepreneus" ref="entrepreneus1Entrepreneus" />
 		<property name="investor" ref="investor02Investor" />
 	</bean>
@@ -546,6 +549,7 @@
 		<property name="money" value="13.0€" />
 		<property name="finalMode" value="false" />
 		<property name="url" value="https://www.youtube.com/watch?v=J28D_9JpuJM" />
+		<property name="filing" value="Control Check 02" />
 		<property name="entrepreneus" ref="entrepreneus1Entrepreneus" />
 	</bean>
 	

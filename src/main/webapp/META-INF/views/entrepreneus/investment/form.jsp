@@ -28,6 +28,7 @@
 	<acme:form-textarea code="entrepreneus.investment.form.label.description" path="description" readonly="true"/>
 	<acme:form-money code="entrepreneus.investment.form.label.money" path="money" readonly="true"/>
 	<acme:form-url code="entrepreneus.investment.form.label.url" path="url" readonly="true"/>
+	<acme:form-textarea code="entrepreneus.investment.form.label.filing" path="filing"/>
 		<jstl:if test="${command != 'create'}">
 			<acme:form-return code = "entrepreneus.accounting-record.form.button.list" action = "/entrepreneus/accounting-record/list?id=${id}"/>
 			<acme:form-return code = "entrepreneus.activity.form.button.list" action = "/entrepreneus/activity/list-by-investment?id=${id}"/>
@@ -39,7 +40,7 @@
 	<jstl:if test="${command != 'create' }">
 	<acme:form-textbox code="entrepreneus.investment.form.label.entrepreneur" path="entrepreneurName" readonly="true"/>
 	</jstl:if>
-	<jstl:if test="${command == 'show' || command == 'update' }">	
+	<jstl:if test="${command == 'show' || command == 'update' }">
 	<acme:form-moment readonly="true" code="entrepreneus.investment.form.label.moment" path="moment"/>
 	</jstl:if>
 	<acme:form-textbox code="entrepreneus.investment.form.label.round" path="round"/>
@@ -47,7 +48,8 @@
 	<acme:form-textarea code="entrepreneus.investment.form.label.description" path="description"/>
 	<acme:form-money code="entrepreneus.investment.form.label.money" path="money"/>
 	<acme:form-url code="entrepreneus.investment.form.label.url" path="url"/>
-		
+	<acme:form-textarea code="entrepreneus.investment.form.label.filing" path="filing"/>
+	
 		<jstl:if test="${command == 'show' || command == 'update' }">
 			<acme:form-checkbox code="entrepreneus.investment.form.label.finalMode" path="finalMode"/>
 			<acme:form-return code = "entrepreneus.accounting-record.form.button.list" action = "/entrepreneus/accounting-record/list?id=${id}"/>
