@@ -1,12 +1,9 @@
 
 package acme.features.investor.offer;
 
-import java.util.Collection;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.investments.Application;
 import acme.entities.offer.Offer;
 import acme.entities.roles.Investor;
 import acme.framework.components.Errors;
@@ -55,9 +52,22 @@ public class InvestorOfferCreateService implements AbstractCreateService<Investo
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		if (!errors.hasErrors("")) {
-			errors.state(request, , "", "i.a.error.uniqueTicker");
+		if (!errors.hasErrors("passProt")) {
+			boolean hasToBeTrue = true;
+			if (request.getModel().getCurrent().get("link").toString().equals("") && request.getModel().getCurrent().get("passProt") != null) {
+				hasToBeTrue = false;
+			}
+			errors.state(request, hasToBeTrue, "passProt", "You cannot get your link password-protected if you do not have a link");
 		}
+		if (!errors.hasErrors("pass")) {
+			boolean hasToBeTrue = true;
+			if (request.getModel().getCurrent().get("link").toString().equals("") && !!request.getModel().getCurrent().get("pass").equals("")) {
+				hasToBeTrue = false;
+			}
+			errors.state(request, hasToBeTrue, "pass", "You cannot write a password if you do not have a link");
+		}
+		//falta que no se pueda poner pass si passProtect no esta marcado y viceversa
+
 	}
 
 	@Override

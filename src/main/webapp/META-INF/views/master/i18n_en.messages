@@ -65,6 +65,7 @@ master.menu.authenticated.inquire-list = Inquire list
 master.menu.authenticated.investment.list = Investment Rounds
 master.menu.authenticated.dforum = Disccusion Forums
 master.menu.authenticated.dforum.create = Create Discussion Forum
+master.menu.authenticated.application.list-no-offer = List Application with no offer
 
 # master.menu.administrator ###################################################
 

@@ -10,7 +10,7 @@ import acme.entities.investments.Application;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface InvestorApplicationRepository extends AbstractRepository {
+public interface InvestorApplicationOfferRepository extends AbstractRepository {
 
 	@Query("select a from Application a where a.investor.id= ?1 AND a.statement='PENDING' AND NOT EXISTS(select o from Offer o)")
 	Collection<Application> findManyByInvestorIdNoOffer(int investorId);

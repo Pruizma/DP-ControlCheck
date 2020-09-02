@@ -1,8 +1,6 @@
 
 package acme.features.investor.offer;
 
-import java.util.Collection;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,14 +8,13 @@ import acme.entities.investments.Application;
 import acme.entities.roles.Investor;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Principal;
-import acme.framework.services.AbstractListService;
+import acme.framework.services.AbstractShowService;
 
 @Service
-public class InvestorApplicationListPendingNoOfferService implements AbstractListService<Investor, Application> {
+public class InvestorApplicationOfferShowService implements AbstractShowService<Investor, Application> {
 
 	@Autowired
-	InvestorApplicationRepository repository;
+	InvestorApplicationOfferRepository repository;
 
 
 	@Override
@@ -31,15 +28,18 @@ public class InvestorApplicationListPendingNoOfferService implements AbstractLis
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		request.unbind(entity, model, "ticker", "statement", "moneyOffer");
+		request.unbind(entity, model, "ticker", "moment", "statement", "justification", "moneyOffer");
+		model.setAttribute("investmentTicker", entity.getInvestment().getTicker());
+		model.setAttribute("investorName", entity.getInvestor().getUserAccount().getUsername());
 	}
 
 	@Override
-	public Collection<Application> findMany(final Request<Application> request) {
+	public Application findOne(final Request<Application> request) {
 		assert request != null;
-		Collection<Application> result;
-		Principal principal = request.getPrincipal();
-		result = this.repository.findManyByInvestorIdNoOffer(principal.getActiveRoleId());
+		Application result;
+		int id;
+		id = request.getModel().getInteger("id");
+		result = this.repository.findOneById(id);
 		return result;
 	}
 }

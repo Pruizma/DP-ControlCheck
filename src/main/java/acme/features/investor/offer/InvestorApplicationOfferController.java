@@ -15,14 +15,14 @@ import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 
 @Controller
-@RequestMapping("/investor/offer/")
-public class InvestorApplicationController extends AbstractController<Investor, Application> {
+@RequestMapping("/investor/application-offer/")
+public class InvestorApplicationOfferController extends AbstractController<Investor, Application> {
 
 	@Autowired
-	private InvestorApplicationListPendingNoOfferService	listPendingNoOfferService;
+	private InvestorApplicationOfferListPendingNoOfferService	listPendingNoOfferService;
 
 	@Autowired
-	private InvestorApplicationShowService					showService;
+	private InvestorApplicationShowService						showService;
 
 
 	@PostConstruct
