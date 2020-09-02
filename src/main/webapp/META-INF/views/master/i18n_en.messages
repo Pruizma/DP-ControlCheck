@@ -70,6 +70,7 @@ master.menu.authenticated.application.list-no-offer = List Application with no o
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator
+master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.notice = List all notices
 master.menu.administrator.notice-create = Create notice
