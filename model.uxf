@@ -342,11 +342,12 @@ Challenge
 + deadline: Date {Temporal(TIMESTAMP)}
 + description: String {NotBlank}
 + rookieGoal: String
-+ rookieReward: Money
++ rookieReward: Money {Valid}{NotNull}
 + averageGoal: String
-+ averageReward: Money
++ averageReward: Money {Valid}{NotNull}
 + expertGoal: String
-+ expertReward: Money</panel_attributes>
++ expertReward: Money {Valid}{NotNull}
+    </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -385,8 +386,8 @@ Inquire
 + creation: Date{Temporal(TIMESTAMP),Past}
 + deadline: Date(Temporal(TIMESTAMP)}
 + description: String {NotBlank}
-+ moneyMin: Money {Valid}
-+ moneyMax: Money {Valid}
++ moneyMin: Money {Valid}{NotNull}
++ moneyMax: Money {Valid}{NotNull}
 + email: String {NotBlank, Email}</panel_attributes>
     <additional_attributes/>
   </element>
@@ -630,7 +631,7 @@ Activity
 + title: String {NotBlank}
 + start: Date {Temporal(TIMESTAMP), Past}
 + end: Date {Temporal(TIMESTAMP)}
-+ budget: Money {Valid}
++ budget: Money {Valid}{NotNull}
 </panel_attributes>
     <additional_attributes/>
   </element>
@@ -648,7 +649,7 @@ Application
 + ticker: String {NotBlank, Pattern}
 + moment: Date {Temporal(TIMESTAMP), Past}
 + statement: String {Temporal(TIMESTAMP)}
-+ moneyOffer: Money {Valid}
++ moneyOffer: Money {Valid}{NotNull}
 + justification: String</panel_attributes>
     <additional_attributes/>
   </element>
@@ -1081,8 +1082,8 @@ Overture
 + description: String {NotBlank}
 + moment: Date {Temporal(TIMESTAMP),Past}
 + deadline: Date {Temporal(TIMESTAMP)}
-+ minMoney: Money
-+ maxMoney: Money
++ minMoney: Money {Valid}{NotNull}
++ maxMoney: Money {Valid}{NotNull}
 + email: String {Email}</panel_attributes>
     <additional_attributes/>
   </element>
