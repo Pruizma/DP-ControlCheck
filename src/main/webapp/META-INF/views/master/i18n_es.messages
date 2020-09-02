@@ -70,6 +70,7 @@ master.menu.authenticated.application.list-no-offer = Listar aplicaciones sin of
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
+master.menu.administrator.dashboard = Tablero
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.notice = Listar todas las notificaciones
 master.menu.administrator.notice-create = Crear notificación
