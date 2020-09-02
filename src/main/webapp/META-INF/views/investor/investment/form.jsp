@@ -11,6 +11,7 @@
 	<acme:form-textarea code="investor.investment.form.label.description" path="description"/>
 	<acme:form-textbox code="investor.investment.form.label.money" path="money"/>
 	<acme:form-textbox code="investor.investment.form.label.url" path="url"/>
+	<acme:form-textarea code="investor.investment.form.label.filing" path="filing"/>
 	<acme:form-submit test="${command == 'show'}" code = "investor.application.form.button.create" action = "/investor/application/create?id=${id}" method="get"/>
   	<acme:form-return code="investor.investment.form.button.return"/>
 </acme:form>

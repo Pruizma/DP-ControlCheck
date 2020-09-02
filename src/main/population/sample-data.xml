@@ -509,6 +509,7 @@
 		<property name="money" value="11.0€" />
 		<property name="finalMode" value="true" />
 		<property name="url" value="https://www.youtube.com/watch?v=J28D_9JpuJM" />
+		<property name="filing" value="Control Check 01" />
 		<property name="entrepreneus" ref="entrepreneus1Entrepreneus" />
 		<property name="investor" ref="investor01Investor" />
 	</bean>
@@ -521,6 +522,7 @@
 		<property name="money" value="12.0€" />
 		<property name="finalMode" value="false" />
 		<property name="url" value="https://www.youtube.com/watch?v=J28D_9JpuJM" />
+		<property name="filing" value="Control Check 04" />
 		<property name="entrepreneus" ref="entrepreneus2Entrepreneus" />
 		<property name="investor" ref="investor02Investor" />
 	</bean>
@@ -533,6 +535,7 @@
 		<property name="money" value="13.0€" />
 		<property name="finalMode" value="false" />
 		<property name="url" value="https://www.youtube.com/watch?v=J28D_9JpuJM" />
+		<property name="filing" value="Control Check 03" />
 		<property name="entrepreneus" ref="entrepreneus1Entrepreneus" />
 		<property name="investor" ref="investor02Investor" />
 	</bean>
@@ -546,6 +549,7 @@
 		<property name="money" value="13.0€" />
 		<property name="finalMode" value="false" />
 		<property name="url" value="https://www.youtube.com/watch?v=J28D_9JpuJM" />
+		<property name="filing" value="Control Check 02" />
 		<property name="entrepreneus" ref="entrepreneus1Entrepreneus" />
 	</bean>
 	
@@ -693,7 +697,7 @@
 	<!-- CreditCard -->
 		<bean name="creditCard01" class="acme.entities.creditCards.CreditCard">
 			<property name="creditCardNumber" value="379354508162306"/>
-			<property name="holder" value="Daniel Rueda"/>
+			<property name="holder" value="Ragnar Lodbrok"/>
 			<property name="brand" value="Visa"/>
 			<property name="cvv" value="646"/>
 			<property name="expirationDate" value="2029/07/11 10:35"/>
@@ -702,7 +706,7 @@
 			<!-- CreditCard -->
 		<bean name="creditCard02" class="acme.entities.creditCards.CreditCard">
 			<property name="creditCardNumber" value="379354508162306"/>
-			<property name="holder" value="Daniel Rueda"/>
+			<property name="holder" value="Urbano II"/>
 			<property name="brand" value="Visa"/>
 			<property name="cvv" value="366"/>
 			<property name="expirationDate" value="2029/08/10 10:35"/>
@@ -711,7 +715,7 @@
 			<!-- CreditCard -->
 		<bean name="creditCard03" class="acme.entities.creditCards.CreditCard">
 			<property name="creditCardNumber" value="379354508162306"/>
-			<property name="holder" value="Daniel Rueda"/>
+			<property name="holder" value="Oda Nobunaga"/>
 			<property name="brand" value="Visa"/>
 			<property name="cvv" value="646"/>
 			<property name="expirationDate" value="2029/07/01 10:35"/>
@@ -720,7 +724,7 @@
 			<!-- CreditCard -->
 		<bean name="creditCard04" class="acme.entities.creditCards.CreditCard">
 			<property name="creditCardNumber" value="379354508162306"/>
-			<property name="holder" value="Daniel Rueda"/>
+			<property name="holder" value="Julio Cesar"/>
 			<property name="brand" value="Visa"/>
 			<property name="cvv" value="656"/>
 			<property name="expirationDate" value="2023/07/10 10:35"/>
@@ -752,7 +756,4 @@
 		<property name="pass" value="no12345..."/>
 		<property name="application" ref="application03"/>
 	</bean>
-	
-	
-	
 </beans>
