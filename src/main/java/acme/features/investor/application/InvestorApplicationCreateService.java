@@ -78,20 +78,43 @@ public class InvestorApplicationCreateService implements AbstractCreateService<I
 					break;
 				}
 			}
-			errors.state(request, unique, "ticker", "i.a.error.uniqueTicker");
+			if (request.getLocale().toLanguageTag().equals("en")) {
+				errors.state(request, unique, "ticker", "The ticker introduced must be unique");
+			} else {
+				errors.state(request, unique, "ticker", "El dentificador introducido debe ser único");
+			}
 		}
 		if (!errors.hasErrors("ticker")) {
 			String newTicker = entity.getTicker().substring(4, 6);
 			Integer fecha = LocalDate.now().getYear();
 			String eyy = fecha.toString().substring(2, 4);
 			boolean isEquals = newTicker.equals(eyy);
-			errors.state(request, isEquals, "ticker", "i.a.error.fecha");
+			if (request.getLocale().toLanguageTag().equals("en")) {
+				errors.state(request, isEquals, "ticker", "The second part of the ticker must be the last 2 digits of the current year");
+			} else {
+				errors.state(request, isEquals, "ticker", "La segunda parte del ticker tiene que ser los 2 últimos dígitos del año actual");
+			}
 		}
 		if (!errors.hasErrors("ticker")) {
 			String newTicker = entity.getTicker().substring(0, 3);
 			String invTicker = entity.getInvestment().getTicker().substring(0, 3);
 			boolean isEquals = newTicker.equals(invTicker);
-			errors.state(request, isEquals, "ticker", "i.a.error.activityTicker");
+			if (request.getLocale().toLanguageTag().equals("en")) {
+				errors.state(request, isEquals, "ticker", "The first part of the ticker must be the first 3 letters of the activity sector of the Investment Round");
+			} else {
+				errors.state(request, isEquals, "ticker", "La primera parte del ticker tiene que ser los 3 primeros dígitos del Investment Round");
+			}
+		}
+		// Formato en €
+		if (!errors.hasErrors("moneyOffer")) {
+			boolean moneyCurrencyMax = entity.getMoneyOffer().getCurrency().equals("EUR") || entity.getMoneyOffer().getCurrency().equals("EUROS") || entity.getMoneyOffer().getCurrency().equals("€");
+			errors.state(request, moneyCurrencyMax, "moneyOffer", "a.o.error.money");
+		}
+
+		// Mínimo debe ser mayor que cero
+		if (!errors.hasErrors("moneyOffer")) {
+			boolean minBiggerThanZero = entity.getMoneyOffer().getAmount() >= 0;
+			errors.state(request, minBiggerThanZero, "moneyOffer", "a.o.error.plus");
 		}
 
 		// Formato en €

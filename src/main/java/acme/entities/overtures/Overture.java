@@ -44,13 +44,13 @@ public class Overture extends DomainEntity {
 	private String				description;
 
 	//Intervalo del Dinero, dinero minimo
-	@Valid
 	@NotNull
+	@Valid
 	private Money				minMoney;
 
 	//Intervalo del Dinero, dinero maximo
-	@Valid
 	@NotNull
+	@Valid
 	private Money				maxMoney;
 
 	@Email
