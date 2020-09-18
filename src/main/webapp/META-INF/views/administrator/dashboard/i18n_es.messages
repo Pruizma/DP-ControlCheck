@@ -1,0 +1,11 @@
+administrator.dashboard.investments = Ratio de las Inversiones que poseen quittel
+administrator.dashboard.applications1 = Ratio de las Aplicaciones que poseen link
+administrator.dashboard.applications2 = Ratio de las Aplicaciones que poseen una contraseña protegida para el link
+administrator.dashboard.application = Aplicaciones
+administrator.dashboard.investment = Inversiones
+
+administrator.dashboard.investments1 = Inversiones que poseen quittel
+administrator.dashboard.applications11 = Aplicaciones que poseen link
+administrator.dashboard.applications22 = Aplicaciones que poseen una contraseña protegida para el link
+
+mensaje.informativo = Datos que muestran la veracidad de los datos presentados

@@ -58,7 +58,7 @@ public class EntrepreneusInvestmentDeleteService implements AbstractDeleteServic
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "ticker", "moment", "round", "title", "description", "money", "url", "deadline");
+		request.unbind(entity, model, "ticker", "moment", "round", "title", "description", "money", "url", "deadline", "quittel");
 
 	}
 

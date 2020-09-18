@@ -509,6 +509,7 @@
 		<property name="money" value="11.0€" />
 		<property name="finalMode" value="true" />
 		<property name="url" value="https://www.youtube.com/watch?v=J28D_9JpuJM" />
+		<property name="quittel" value="Control Check 01" />
 		<property name="entrepreneus" ref="entrepreneus1Entrepreneus" />
 		<property name="investor" ref="investor01Investor" />
 	</bean>
@@ -521,6 +522,7 @@
 		<property name="money" value="12.0€" />
 		<property name="finalMode" value="false" />
 		<property name="url" value="https://www.youtube.com/watch?v=J28D_9JpuJM" />
+		<property name="quittel" value="Control Check 04" />
 		<property name="entrepreneus" ref="entrepreneus2Entrepreneus" />
 		<property name="investor" ref="investor02Investor" />
 	</bean>
@@ -529,14 +531,15 @@
 		<property name="moment" value="2020/06/05 00:00" />
 		<property name="round" value="ANGEL" />
 		<property name="title" value="Investment 3" />
-		<property name="description" value="Description 3" />
+		<property name="description" value="Investment with Quittel" />
 		<property name="money" value="13.0€" />
 		<property name="finalMode" value="false" />
 		<property name="url" value="https://www.youtube.com/watch?v=J28D_9JpuJM" />
+		<property name="quittel" value="Control Check 03" />
 		<property name="entrepreneus" ref="entrepreneus1Entrepreneus" />
-		<property name="investor" ref="investor02Investor" />
+		<property name="investor" ref="investor01Investor" />
 	</bean>
-	
+
 		<bean id="investment04" class="acme.entities.investments.Investment">
 		<property name="ticker" value="ART-20-000003" />
 		<property name="moment" value="2020/06/06 00:00" />
@@ -546,10 +549,10 @@
 		<property name="money" value="13.0€" />
 		<property name="finalMode" value="false" />
 		<property name="url" value="https://www.youtube.com/watch?v=J28D_9JpuJM" />
+		<property name="quittel" value="Control Check 02" />
 		<property name="entrepreneus" ref="entrepreneus1Entrepreneus" />
 	</bean>
 	
-
 	<!-- Activity -->
 	<bean id="Activity01" class="acme.entities.investments.Activity">
 		<property name="title" value="Activity 1" />
@@ -744,4 +747,12 @@
 		<property name="picture" value="https://i.pinimg.com/originals/fc/29/ce/fc29ce3970c7d8ca03fcc45a6d817e8b.jpg" />
 	</bean>
 	
+	<!-- Offers -->
+	<bean name="offer01" class="acme.entities.offer.Offer">
+		<property name="title" value="offer 01"/>
+		<property name="link" value="http://www.wikipedia.com"/>
+		<property name="passProt" value="true"/>
+		<property name="pass" value="no12345..."/>
+		<property name="application" ref="application03"/>
+	</bean>
 </beans>

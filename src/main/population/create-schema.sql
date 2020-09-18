@@ -201,6 +201,7 @@
         `moment` datetime(6),
         `money_amount` double precision,
         `money_currency` varchar(255),
+        `quittel` varchar(255),
         `round` varchar(255),
         `ticker` varchar(255),
         `title` varchar(255),
@@ -241,6 +242,18 @@
         `link` varchar(255),
         `moment` datetime(6),
         `title` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `offer` (
+       `id` integer not null,
+        `version` integer not null,
+        `aux` bit,
+        `link` varchar(255),
+        `pass` varchar(255),
+        `pass_prot` bit,
+        `title` varchar(255),
+        `application_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -340,6 +353,9 @@
 
     alter table `investment` 
        add constraint UK_i5ustbh87xrpsxd0lql1e51pg unique (`ticker`);
+
+    alter table `offer` 
+       add constraint UK_f59xuo7xtxx3go73x8amehj0f unique (`application_id`);
 
     alter table `user_account` 
        add constraint UK_castjbvpeeus0r8lbpehiu0e4 unique (`username`);
@@ -443,3 +459,8 @@
        add constraint `FKr2om5f6tefk2fg0fyl53q2kgd` 
        foreign key (`discussion_forum_id`) 
        references `discussion_forum` (`id`);
+
+    alter table `offer` 
+       add constraint `FKsw0w3bk6u9fby3rbg0fsf2ija` 
+       foreign key (`application_id`) 
+       references `application` (`id`);

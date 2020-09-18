@@ -1,0 +1,6 @@
+investor.offer.form.label.title = Título:
+investor.offer.form.label.link = Link:
+investor.offer.form.label.passProt = Protegido con contraseña?:
+investor.offer.form.label.pass = Contraseña:
+investor.offer.form.button.create = Crear
+investor.offer.form.button.return = Volver

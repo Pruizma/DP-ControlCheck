@@ -65,10 +65,12 @@ master.menu.authenticated.inquire-list = Inquire list
 master.menu.authenticated.investment.list = Investment Rounds
 master.menu.authenticated.dforum = Disccusion Forums
 master.menu.authenticated.dforum.create = Create Discussion Forum
+master.menu.authenticated.application.list-no-offer = List Application with no offer
 
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator
+master.menu.administrator.dashboard = Dashboard
 master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.notice = List all notices
 master.menu.administrator.notice-create = Create notice
@@ -103,11 +105,14 @@ master.menu.entrepreneus.application.listFecha = Application List Grouped By Mom
 
 master.menu.entrepreneus.application.listPending = Accept/Reject applications
 
+master.menu.entrepreneus.offer.list = List applications with offer
+
 # master.menu.investor ##########################################################
 
 master.menu.investor = Investor
 master.menu.investor.application.listMine = List applications
 master.menu.investor.application.create = Create application
+master.menu.investor.application.list-no-offer = List pending application with no offer
 
 # master.menu.bookkeeper ##########################################################
 master.menu.bookkeeper = Bookkeeper 

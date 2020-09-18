@@ -64,7 +64,7 @@ public class EntrepreneusInvestmentUpdateService implements AbstractUpdateServic
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "ticker", "moment", "round", "title", "description", "finalMode", "money", "url");
+		request.unbind(entity, model, "ticker", "moment", "round", "title", "description", "finalMode", "money", "url", "quittel");
 	}
 
 	@Override

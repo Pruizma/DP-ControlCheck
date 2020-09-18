@@ -64,6 +64,12 @@ public class Investment extends DomainEntity {
 	private String				url;
 
 	private boolean				finalMode;
+
+	//============>> Control Check <<=================
+
+	@Length(max = 1024)
+	private String				quittel;
+
 	//============================================
 	@NotNull
 	@Valid

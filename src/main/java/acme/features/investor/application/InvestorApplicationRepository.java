@@ -28,4 +28,10 @@ public interface InvestorApplicationRepository extends AbstractRepository {
 
 	@Query("select i from Investor i where i.id = ?1")
 	Investor findInvestorById(int id);
+
+	@Query("select a from Application a where a.investor.id= ?1 and a.statement='PENDING' and a.investment.quittel!='' and a.investment.quittel is not null and not exists(select o from Offer o where o.application.id = a.id)")
+	Collection<Application> findManyByInvestorIdNoOffer(int investorId);
+
+	@Query("select a from Application a where a.id= ?1 and a.statement='PENDING' and a.investment.quittel!='' and a.investment.quittel is not null and not exists(select o from Offer o where o.application.id = ?1)")
+	Application findOneByIdNoOffer(int id);
 }

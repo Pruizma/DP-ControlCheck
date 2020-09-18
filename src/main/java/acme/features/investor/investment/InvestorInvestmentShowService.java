@@ -28,7 +28,7 @@ public class InvestorInvestmentShowService implements AbstractShowService<Invest
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		request.unbind(entity, model, "ticker", "moment", "round", "title", "description", "money", "url");
+		request.unbind(entity, model, "ticker", "moment", "round", "title", "description", "money", "url", "quittel");
 	}
 
 	@Override

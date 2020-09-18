@@ -46,7 +46,7 @@ public class EntrepreneusInvestmentShowService implements AbstractShowService<En
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "ticker", "moment", "round", "title", "description", "finalMode", "money", "url");
+		request.unbind(entity, model, "ticker", "moment", "round", "title", "description", "finalMode", "money", "url", "quittel");
 		model.setAttribute("entrepreneurName", entity.getEntrepreneus().getUserAccount().getUsername());
 
 	}

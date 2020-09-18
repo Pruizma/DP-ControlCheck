@@ -10,3 +10,8 @@ investor.application.form.label.moneyOffer = Oferta de dinero:
 investor.application.form.label.investmentTicker = Identificador de la inversión:
 investor.application.form.label.investorName = Nombre del inversor:
 investor.application.form.button.return = Volver
+investor.offer.form.button.create = Crear oferta
+
+i.a.error.uniqueTicker = El dentificador introducido debe ser único
+i.a.error.fecha = La segunda parte del ticker tiene que ser los 2 últimos dígitos del año actual
+i.a.error.activityTicker = La primera parte del ticker tiene que ser los 3 primeros dígitos del Investment Round

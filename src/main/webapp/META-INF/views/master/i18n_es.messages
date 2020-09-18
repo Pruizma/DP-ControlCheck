@@ -65,10 +65,12 @@ master.menu.authenticated.inquire-list = Lista de preguntas
 master.menu.authenticated.investment.list = Rondas de Inversiones
 master.menu.authenticated.dforum = Foros de discusión
 master.menu.authenticated.dforum.create = Crear foro de discusión
+master.menu.authenticated.application.list-no-offer = Listar aplicaciones sin oferta
 
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
+master.menu.administrator.dashboard = Tablero
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.notice = Listar todas las notificaciones
 master.menu.administrator.notice-create = Crear notificación
@@ -106,11 +108,14 @@ master.menu.entrepreneus.application.listFecha = Lista de aplicaciones agrupada 
 
 master.menu.entrepreneus.application.listPending = Aceptar/Rechazar aplicaciones
 
+master.menu.entrepreneus.offer.list = Listar aplicaciones con oferta
+
 # master.menu.investor ##########################################################
 
 master.menu.investor = Inversor
 master.menu.investor.application.listMine = Lista de aplicaciones
 master.menu.investor.application.create = Crear aplicación
+master.menu.investor.application.list-no-offer = Aplicaciones pendientes sin oferta
 
 # master.menu.bookkeeper ##########################################################
 master.menu.bookkeeper = Bookkeeper 
