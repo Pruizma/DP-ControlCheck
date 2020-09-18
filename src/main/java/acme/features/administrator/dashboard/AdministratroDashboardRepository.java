@@ -9,18 +9,21 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface AdministratroDashboardRepository extends AbstractRepository {
 
-	@Query("select count(i) from Investment i where i.money.amount > 10")
-	Double investmentsWithMoreThanTenEuros();
-	
+	@Query("select count(i) from Investment i where i.quittel != ''")
+	Double investmentsWithoutQuittel();
+
 	@Query("select count(i) from Investment i")
 	Double numberOfInvestments();
-	
-	@Query("select count(a) from Application a where a.justification != null")
-	Double applicationsWithJustification();
-		
-	@Query("select count(a) from Application a where a.moneyOffer.amount % 2.0 = 0")
-	Double applicationsWithEvenMoneyOffer();
-	
+
+	// Es nuestro caso Offer es OneToOne por lo que si el Offer tiene link, la Application tendrá, y los que no tenga Offer pues no pueden tener link
+	@Query("select count(a) from Offer a where a.link != null")
+	Double applicationsWithLink();
+
+	//Mismo proceidmiento que el de arriba
+
+	@Query("select count(a) from Offer a where a.passProt != false")
+	Double applicationsWithPasswordProtected();
+
 	@Query("select count(a) from Application a")
 	Double numberOfApplications();
 }

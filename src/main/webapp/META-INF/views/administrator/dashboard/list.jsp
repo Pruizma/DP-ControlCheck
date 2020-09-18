@@ -16,9 +16,16 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form readonly="true">
-<acme:form-double code="administrator.dashboard.investments" path="investmentsWithMoreThanTenEuros"/>
-<acme:form-double code="administrator.dashboard.applications1" path="applicationsWithJustification"/>
-<acme:form-double code="administrator.dashboard.applications2" path="applicationsWithEvenMoneyOffer"/>
+<acme:form-double code="administrator.dashboard.investments" path="investmentsWithoutQuittel"/>
+<acme:form-double code="administrator.dashboard.applications1" path="applicationsWithLink"/>
+<acme:form-double code="administrator.dashboard.applications2" path="applicationsWithPasswordProtected"/>
+<acme:message code="mensaje.informativo"/>
+<acme:form-double code="administrator.dashboard.application" path="application"/>
+<acme:form-double code="administrator.dashboard.investment" path="investment"/>
+<acme:form-double code="administrator.dashboard.investments1" path="investmentsWithoutQuittel2"/>
+<acme:form-double code="administrator.dashboard.applications11" path="applicationsWithLink2"/>
+<acme:form-double code="administrator.dashboard.applications22" path="applicationsWithPasswordProtected2"/>
+
 </acme:form>
 
 

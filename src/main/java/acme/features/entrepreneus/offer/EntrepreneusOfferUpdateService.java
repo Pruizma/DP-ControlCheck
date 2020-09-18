@@ -30,7 +30,9 @@ public class EntrepreneusOfferUpdateService implements AbstractUpdateService<Ent
 		assert errors != null;
 
 		request.bind(entity, errors, "aux");
-
+		if (request.getModel().getCurrent().get("passTextbox").toString().equals(entity.getPass().toString())) {
+			entity.setAux(true);
+		}
 	}
 
 	@Override

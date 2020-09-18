@@ -6,8 +6,9 @@
 <jstl:if test="${aux == true}">
 <acme:form readonly = "true">
 		<acme:form-textbox code="entrepreneus.offer.form.label.title" path="title" />
-		<acme:form-moment code="entrepreneus.offer.form.label.link" path="link" />
-		
+		<jstl:if test="${link != ''}">
+		<acme:form-url code="entrepreneus.offer.form.label.link" path="link" />
+		</jstl:if>
 		<acme:form-return code="entrepreneus.application.form.button.return" />
 </acme:form>
 </jstl:if>

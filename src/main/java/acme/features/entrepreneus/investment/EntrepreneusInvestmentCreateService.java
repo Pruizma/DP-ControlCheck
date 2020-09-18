@@ -41,7 +41,7 @@ public class EntrepreneusInvestmentCreateService implements AbstractCreateServic
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "ticker", "round", "title", "description", "money", "url", "filing");
+		request.unbind(entity, model, "ticker", "round", "title", "description", "money", "url", "quittel");
 	}
 	@Override
 	public void bind(final Request<Investment> request, final Investment entity, final Errors errors) {

@@ -1,6 +1,13 @@
-administrator.dashboard.investments = Investments with more than a 10 euro budget
-administrator.dashboard.applications1 = Applications with a justification
-administrator.dashboard.applications2 = Applications with an even moneyOffer
+administrator.dashboard.investments = The ratio of investment rounds that have a quittel
+administrator.dashboard.applications1 = The ratio of applications that have a link
+administrator.dashboard.applications2 =  The ratio of applications that have a password-protected link. 
+administrator.dashboard.application = Application
+administrator.dashboard.investment = Investment
 
+administrator.dashboard.investments1 = Investment rounds that have a quittel
+administrator.dashboard.applications11 = Applications that have a link
+administrator.dashboard.applications22 =  Applications that have a password-protected link.
+
+mensaje.informativo = Data to verify that the first three data works correctly
 
 

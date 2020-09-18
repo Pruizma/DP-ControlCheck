@@ -3,7 +3,7 @@ investor.investment.list.label.round = Round
 investor.investment.list.label.title = Title
 investor.investment.list.label.description = Description
 
-investor.investment.form.label.filing = Filing 
+investor.investment.form.label.quittel = Quittel
 
 investor.investment.form.label.ticker = Ticker
 investor.investment.form.label.moment = Creation Moment

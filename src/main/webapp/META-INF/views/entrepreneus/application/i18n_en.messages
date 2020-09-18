@@ -11,6 +11,7 @@ entrepreneus.application.form.label.investmentTicker = Investment ticker:
 entrepreneus.application.form.label.investorName = Investor name:
 entrepreneus.application.form.button.offer = Offer
 
+entrepreneus.application.form.label.quittel = Quittel
 
 entrepreneus.application.form.button.return = Return
 

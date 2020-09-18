@@ -86,9 +86,9 @@ public class InvestorOfferCreateService implements AbstractCreateService<Investo
 		if (!entity.getPass().isEmpty()) {
 			PasswordChecker pc = new PasswordChecker(); // clase implementada en components
 			if (request.getLocale().toLanguageTag().equals("en")) { // longitud, letras, digitos, signos de puntuacion.
-				errors.state(request, pc.PasswordCheck(entity.getPass(), 10, 2, 5, 3), "pass", "Incorrect Pattern");
+				errors.state(request, pc.PasswordCheck(entity.getPass(), 10, 1, 1, 1), "pass", "Incorrect Pattern, must minimum: 10 characters that inlcludes at least one letter, one digit, and one punctuation symbol.");
 			} else {
-				errors.state(request, pc.PasswordCheck(entity.getPass(), 10, 2, 5, 3), "pass", "Patron incorrecto");
+				errors.state(request, pc.PasswordCheck(entity.getPass(), 10, 1, 1, 1), "pass", "Patron incorrecto, debe tener como minimo 10 caracteres que incluyen una letra, un número y un signo de puntuación, como mínimo");
 			}
 		}
 

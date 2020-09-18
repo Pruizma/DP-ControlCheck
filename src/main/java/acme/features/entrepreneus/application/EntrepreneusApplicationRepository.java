@@ -32,10 +32,10 @@ public interface EntrepreneusApplicationRepository extends AbstractRepository {
 	@Query("select a from Application a where a.investment.entrepreneus.id= ?1 AND a.statement='PENDING' ORDER BY a.moment")
 	Collection<Application> findManyPendingByEntrepreneusId(int entrepreneusId);
 
-	@Query("select a from Application a where a.investment.entrepreneus.id= ?1 AND a.investment.filing!='' AND a.investment.filing IS NOT NULL AND EXISTS(select o from Offer o where o.application.id = a.id)")
+	@Query("select a from Application a where a.investment.entrepreneus.id= ?1 AND a.investment.quittel!='' AND a.investment.quittel IS NOT NULL AND EXISTS(select o from Offer o where o.application.id = a.id)")
 	Collection<Application> findApplicationsByExistsOffer(int id);
 
-	@Query("select a from Application a where a.id= ?1 and a.statement='PENDING' AND a.investment.filing!='' AND a.investment.filing IS NOT NULL AND EXISTS(select o from Offer o where o.application.id = ?1)")
+	@Query("select a from Application a where a.id= ?1 and a.statement='PENDING' AND a.investment.quittel!='' AND a.investment.quittel IS NOT NULL AND EXISTS(select o from Offer o where o.application.id = ?1)")
 	Application findOneByIdNoOffer(int id);
 
 	@Query("select o from Offer o where o.application.id = ?1")

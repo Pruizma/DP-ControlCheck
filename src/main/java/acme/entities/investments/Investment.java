@@ -67,8 +67,8 @@ public class Investment extends DomainEntity {
 
 	//============>> Control Check <<=================
 
-	@Length(max = 256)
-	private String				filing;
+	@Length(max = 1024)
+	private String				quittel;
 
 	//============================================
 	@NotNull

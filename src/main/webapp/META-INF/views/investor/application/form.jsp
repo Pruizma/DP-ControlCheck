@@ -17,7 +17,9 @@
 		<acme:form-textbox code="investor.application.form.label.ticker" path="ticker" />
 		<acme:form-moment code="investor.application.form.label.moment" path="moment" />
 		<acme:form-textbox code="investor.application.form.label.statement" path="statement" />
+		<jstl:if test="${justification != ''}">
 		<acme:form-textbox code="investor.application.form.label.justification" path="justification" />
+		</jstl:if>
 		<acme:form-money code="investor.application.form.label.moneyOffer" path="moneyOffer" />
 		<acme:form-money code="investor.application.form.label.investmentTicker" path="investmentTicker" />
 		<acme:form-money code="investor.application.form.label.investorName" path="investorName" />

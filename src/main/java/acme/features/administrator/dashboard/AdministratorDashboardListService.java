@@ -33,32 +33,35 @@ public class AdministratorDashboardListService implements AbstractListService<Ad
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "investmentsWithMoreThanTenEuros", "applicationsWithJustification", "applicationsWithEvenMoneyOffer");
+		request.unbind(entity, model, "investmentsWithoutQuittel", "applicationsWithLink", "applicationsWithPasswordProtected", "investment", "application", "investmentsWithoutQuittel2", "applicationsWithLink2", "applicationsWithPasswordProtected2");
 
 	}
 
 	@Override
 	public Collection<Dashboard> findMany(final Request<Dashboard> request) {
-		
+
 		List<Dashboard> result = new ArrayList<>();
 		Dashboard d = new Dashboard();
-		
-		Double investmentsWithMoreThanTenEuros = this.repository.investmentsWithMoreThanTenEuros();
+
+		Double investmentsWithMoreThanTenEuros = this.repository.investmentsWithoutQuittel();
 		Double investments = this.repository.numberOfInvestments();
-		
-		Double applicationsWithJustification = this.repository.applicationsWithJustification();
-		Double applicationsWithEvenMoneyOffer = this.repository.applicationsWithEvenMoneyOffer();
+
+		Double applicationsWithJustification = this.repository.applicationsWithLink();
+		Double applicationsWithEvenMoneyOffer = this.repository.applicationsWithPasswordProtected();
 		Double applications = this.repository.numberOfApplications();
 
-		
 		Double resultInvestments = (double) (investmentsWithMoreThanTenEuros / investments);
 		Double resultApplicationsJust = (double) (applicationsWithJustification / applications);
 		Double resultApplicationsMon = (double) (applicationsWithEvenMoneyOffer / applications);
 
-		d.setInvestmentsWithMoreThanTenEuros(resultInvestments);
-		d.setApplicationsWithJustification(resultApplicationsJust);
-		d.setApplicationsWithEvenMoneyOffer(resultApplicationsMon);
-		
+		d.setInvestmentsWithoutQuittel(resultInvestments);
+		d.setApplicationsWithLink(resultApplicationsJust);
+		d.setApplicationsWithPasswordProtected(resultApplicationsMon);
+		d.setApplication(applications);
+		d.setInvestment(investments);
+		d.setInvestmentsWithoutQuittel2(investmentsWithMoreThanTenEuros);
+		d.setApplicationsWithLink2(applicationsWithJustification);
+		d.setApplicationsWithPasswordProtected2(applicationsWithEvenMoneyOffer);
 		result.add(d);
 
 		return result;

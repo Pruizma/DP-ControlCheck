@@ -11,6 +11,10 @@ entrepreneus.application.form.label.investmentTicker = Identificador de la inver
 entrepreneus.application.form.label.investorName = Nombre del inversor:
 entrepreneus.application.form.button.offer = Oferta
 
+
+
+entrepreneus.application.form.label.quittel = Quittel
+
 entrepreneus.application.form.button.return = Volver
 
 entrepreneus.application.list.label.moment = Momento de Creación

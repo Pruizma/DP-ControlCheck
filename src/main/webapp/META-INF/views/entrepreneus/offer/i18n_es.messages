@@ -1,6 +1,6 @@
 entrepreneus.offer.form.label.title = Título:
 entrepreneus.offer.form.label.link = Link:
-entrepreneus.offer.form.label.passTextBox = Debes escribir la contraseña para ver el link (Aparecera la próxima vez que entres): 
+entrepreneus.offer.form.label.passTextBox = Debes escribir la contraseña, SI EXISTE, para ver el link (Aparecera la próxima vez que entres): 
 entrepreneus.offer.form.button.update = Enviar
 
 entrepreneus.offer.list.label.title = Título
