@@ -16,7 +16,9 @@
 		<acme:form-money code="entrepreneus.application.form.label.investmentTicker" path="investmentTicker" />
 		<acme:form-money code="entrepreneus.application.form.label.investorName" path="investorName" />
 		<acme:form-submit test="${offer == true }" code="entrepreneus.application.form.button.offer" action="http://localhost:8080/acme-incubator/entrepreneus/offer/show?id=${offerid}" method= "get"  />
+		<jstl:if test="${statement == 'PENDING'}">
 		<acme:form-submit code="entrepreneus.application.form.button.update" action = "/entrepreneus/application/update?id=${id}"/>
+		</jstl:if>
 		<acme:form-return code="entrepreneus.application.form.button.return" />
 	</acme:form>
 </jstl:if>
