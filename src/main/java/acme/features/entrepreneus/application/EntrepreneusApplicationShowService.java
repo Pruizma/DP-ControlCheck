@@ -34,7 +34,12 @@ public class EntrepreneusApplicationShowService implements AbstractShowService<E
 			offer = true;
 		}
 		int id = request.getModel().getInteger("id");
-		Offer o = this.repository.findOneByApplicationId(id);
+		Offer o = this.repository.findOneOfferByApplicationId(id);
+
+		boolean passProct = o.getPassProt();
+		String titleOffer = o.getTitle();
+		String linkOffer = o.getLink();
+		Boolean aux = o.getAux();
 		request.unbind(entity, model, "ticker", "moment", "statement", "justification", "moneyOffer");
 		model.setAttribute("investmentTicker", entity.getInvestment().getTicker());
 		model.setAttribute("investorName", entity.getInvestor().getUserAccount().getUsername());
@@ -42,6 +47,10 @@ public class EntrepreneusApplicationShowService implements AbstractShowService<E
 			int offerid = o.getId();
 			model.setAttribute("offer", offer);
 			model.setAttribute("offerid", offerid);
+			model.setAttribute("passProct", passProct);
+			model.setAttribute("titleOffer", titleOffer);
+			model.setAttribute("linkOffer", linkOffer);
+			model.setAttribute("aux", aux);
 		}
 	}
 

@@ -21,3 +21,6 @@ entrepreneus.application.list.label.moment = Momento de Creación
 entrepreneus.application.form.button.list-fecha = Lista Ordenada
 
 entrepreneus.application.form.button.update = Aceptar/Rechazar
+
+entrepreneus.offer.form.label.titleOffer = Titulo de la Oferta
+entrepreneus.offer.form.label.linkOffer = Link de la Oferta

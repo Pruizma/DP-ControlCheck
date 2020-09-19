@@ -43,6 +43,6 @@ public interface EntrepreneusApplicationRepository extends AbstractRepository {
 	Application findOneByIdNoOffer(int id);
 
 	@Query("select o from Offer o where o.application.id = ?1")
-	Offer findOneByApplicationId(int id);
+	Offer findOneOfferByApplicationId(int id);
 
 }

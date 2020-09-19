@@ -15,7 +15,35 @@
 		<acme:form-money code="entrepreneus.application.form.label.moneyOffer" path="moneyOffer" />
 		<acme:form-money code="entrepreneus.application.form.label.investmentTicker" path="investmentTicker" />
 		<acme:form-money code="entrepreneus.application.form.label.investorName" path="investorName" />
+		
+		<!--
+		<jstl:if test="${passProct == false}">
+		<acme:form-submit test="${offer == true }" code="entrepreneus.application.form.button.offer" action="/entrepreneus/offer/show?id=${offerid}" method= "post"  />
+		</jstl:if>
+		<jstl:if test="${passProct != false}">
 		<acme:form-submit test="${offer == true }" code="entrepreneus.application.form.button.offer" action="/entrepreneus/offer/show?id=${offerid}" method= "get"  />
+		</jstl:if>
+		-->
+		
+		<jstl:if test="${passProct == false}">
+		<acme:form-textbox code="entrepreneus.offer.form.label.titleOffer" path="titleOffer" />
+		<jstl:if test="${link != ''}">
+		<acme:form-url code="entrepreneus.offer.form.label.linkOffer" path="linkOffer" />
+		</jstl:if>
+		</jstl:if>
+		
+		<jstl:if test="${passProct != false && aux != true}">
+		<acme:form-submit test="${offer == true }" code="entrepreneus.application.form.button.offer" action="/entrepreneus/offer/show?id=${offerid}" method= "get"  />
+		</jstl:if>
+		
+		<jstl:if test="${passProct != false && aux == true}">
+		<acme:form-textbox code="entrepreneus.offer.form.label.titleOffer" path="titleOffer" />
+		<jstl:if test="${link != ''}">
+		<acme:form-url code="entrepreneus.offer.form.label.linkOffer" path="linkOffer" />
+		</jstl:if>
+		</jstl:if>
+		
+		
 		<jstl:if test="${statement == 'PENDING'}">
 		<acme:form-submit code="entrepreneus.application.form.button.update" action = "/entrepreneus/application/update?id=${id}" method= "get" />
 		</jstl:if>
