@@ -21,8 +21,11 @@
 		<acme:form-textbox code="investor.application.form.label.justification" path="justification" />
 		</jstl:if>
 		<acme:form-money code="investor.application.form.label.moneyOffer" path="moneyOffer" />
-		<acme:form-money code="investor.application.form.label.investmentTicker" path="investmentTicker" />
-		<acme:form-money code="investor.application.form.label.investorName" path="investorName" />
+		<acme:form-textbox code="investor.application.form.label.investmentTicker" path="investmentTicker" />
+		<acme:form-textbox code="investor.application.form.label.investorName" path="investorName" />
+		<jstl:if test="${quittel != ''}">
+				<acme:form-textbox code="investor.application.form.label.quittel" path="quittel" />
+				</jstl:if>
 		<acme:form-submit test="${offer == true}" code="investor.offer.form.button.create" action="/investor/offer/create?id=${id}"
 			method="get" />
 		<acme:form-return code="investor.application.form.button.return" />

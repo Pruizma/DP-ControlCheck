@@ -14,6 +14,8 @@ administrator.notice.list.label.moment = Moment
 administrator.notice.list.label.deadline = Deadline
 administrator.notice.list.label.body = Body
 
+administrator.notice.form.label.confirm: Confirm notice
+
 administrator.notice.form.label.headerImage = Header Image
 administrator.notice.form.label.title = Title
 administrator.notice.form.label.moment = Moment
@@ -22,6 +24,8 @@ administrator.notice.form.label.body = Body
 administrator.notice.form.label.link = Link to another notice
 
 error.nospam = You used inappropriate language, please do not use words like that
+
+a.o.error.deadline.confirm = Must Confirm the notice
 
 
 administrator.notice.form.button.create = Create

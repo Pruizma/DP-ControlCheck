@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.notices.Notice;
-import acme.features.administrator.notice.AdministratorNoticeRepository;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Administrator;
@@ -31,7 +30,6 @@ public class AdministratorNoticeListService implements AbstractListService<Admin
 	public Collection<Notice> findMany(final Request<Notice> request) {
 		assert request != null;
 
-
 		Collection<Notice> result;
 		result = this.repository.findMany();
 
@@ -44,7 +42,7 @@ public class AdministratorNoticeListService implements AbstractListService<Admin
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "headerImage", "title", "moment", "deadline", "body");
+		request.unbind(entity, model, "title", "deadline", "body");
 	}
 
 }

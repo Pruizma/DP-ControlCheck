@@ -100,9 +100,9 @@ public class InvestorApplicationCreateService implements AbstractCreateService<I
 			String invTicker = entity.getInvestment().getTicker().substring(0, 3);
 			boolean isEquals = newTicker.equals(invTicker);
 			if (request.getLocale().toLanguageTag().equals("en")) {
-				errors.state(request, isEquals, "ticker", "The first part of the ticker must be the first 3 letters of the activity sector of the Investment Round");
+				errors.state(request, isEquals, "ticker", "The first part of the ticker must be the first 3 letters of the activity sector of the Investment Round: " + invTicker);
 			} else {
-				errors.state(request, isEquals, "ticker", "La primera parte del ticker tiene que ser los 3 primeros dígitos del Investment Round");
+				errors.state(request, isEquals, "ticker", "La primera parte del ticker tiene que ser los 3 primeros dígitos del Investment Round: " + invTicker);
 			}
 		}
 		// Formato en €

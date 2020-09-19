@@ -36,6 +36,7 @@ public class InvestorApplicationShowService implements AbstractShowService<Inves
 		model.setAttribute("investmentTicker", entity.getInvestment().getTicker());
 		model.setAttribute("investorName", entity.getInvestor().getUserAccount().getUsername());
 		model.setAttribute("offer", offer);
+		model.setAttribute("quittel", entity.getInvestment().getQuittel());
 	}
 
 	@Override

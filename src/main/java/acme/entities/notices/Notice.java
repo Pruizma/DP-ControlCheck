@@ -42,8 +42,11 @@ public class Notice extends DomainEntity {
 
 	@NotBlank
 	private String				body;
-	
+
 	@URL
 	private String				link;
+
+	@NotNull
+	private boolean				confirm;
 
 }

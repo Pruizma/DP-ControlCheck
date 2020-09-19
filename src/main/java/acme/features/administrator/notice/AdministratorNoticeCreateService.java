@@ -20,11 +20,12 @@ import acme.framework.services.AbstractCreateService;
 public class AdministratorNoticeCreateService implements AbstractCreateService<Administrator, Notice> {
 
 	@Autowired
-	AdministratorNoticeRepository repository;
+	AdministratorNoticeRepository					repository;
 
 	@Autowired
-	AdministratorCustomisationParameterRepository customRepo;
-	
+	AdministratorCustomisationParameterRepository	customRepo;
+
+
 	@Override
 	public boolean authorise(final Request<Notice> request) {
 		assert request != null;
@@ -45,7 +46,7 @@ public class AdministratorNoticeCreateService implements AbstractCreateService<A
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "headerImage", "title", "body", "deadline", "link");
+		request.unbind(entity, model, "headerImage", "title", "body", "deadline", "link", "confirm");
 	}
 
 	@Override
@@ -56,7 +57,7 @@ public class AdministratorNoticeCreateService implements AbstractCreateService<A
 
 		request.bind(entity, errors, "moment");
 	}
-	
+
 	@Override
 	public void validate(final Request<Notice> request, final Notice entity, final Errors errors) {
 		assert request != null;
@@ -70,7 +71,6 @@ public class AdministratorNoticeCreateService implements AbstractCreateService<A
 				errors.state(request, deadlinePassed, "deadline", "a.o.error.deadline.passed");
 			}
 		}
-		
 
 		if (!errors.hasErrors("title")) {
 			boolean hasToBeTrue = true;
@@ -85,7 +85,7 @@ public class AdministratorNoticeCreateService implements AbstractCreateService<A
 			}
 			errors.state(request, hasToBeTrue, "title", "error.nospam");
 		}
-		
+
 		if (!errors.hasErrors("body")) {
 			boolean hasToBeTrue = true;
 			Collection<CustomisationParameter> customisationParameters = this.customRepo.findManyAll();
@@ -99,9 +99,14 @@ public class AdministratorNoticeCreateService implements AbstractCreateService<A
 			}
 			errors.state(request, hasToBeTrue, "body", "error.nospam");
 		}
+
+		if (!errors.hasErrors("confirm")) {
+			Boolean aux = entity.isConfirm();
+			errors.state(request, aux, "confirm", "a.o.error.deadline.confirm");
+		}
+
 	}
 
-	
 	@Override
 	public void create(final Request<Notice> request, final Notice entity) {
 		assert request != null;

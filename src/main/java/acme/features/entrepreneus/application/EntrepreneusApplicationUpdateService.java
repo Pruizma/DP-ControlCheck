@@ -9,6 +9,7 @@ import acme.entities.roles.Entrepreneus;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractUpdateService;
 
 @Service
@@ -21,7 +22,19 @@ public class EntrepreneusApplicationUpdateService implements AbstractUpdateServi
 	@Override
 	public boolean authorise(final Request<Application> request) {
 		assert request != null;
-		return true;
+
+		boolean result;
+		int applicationId;
+		Application application;
+		Entrepreneus entrepreneur;
+		Principal principal;
+
+		applicationId = request.getModel().getInteger("id");
+		application = this.repository.findOneById(applicationId);
+		entrepreneur = application.getInvestment().getEntrepreneus();
+		principal = request.getPrincipal();
+		result = entrepreneur.getUserAccount().getId() == principal.getAccountId();
+		return result;
 	}
 
 	@Override
@@ -29,7 +42,7 @@ public class EntrepreneusApplicationUpdateService implements AbstractUpdateServi
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		request.bind(entity, errors, "ticker", "moment", "moneyOffer", "investment", "investor");
+		request.bind(entity, errors, "ticker", "moment", "justification", "moneyOffer", "investment", "investor");
 	}
 
 	@Override

@@ -16,6 +16,9 @@ public interface EntrepreneusApplicationRepository extends AbstractRepository {
 	@Query("select a from Application a where a.id= ?1")
 	Application findOneById(int id);
 
+	@Query("select a from Application a where a.investment.id = ?1")
+	Collection<Application> findApplicationByInvestmentId(int id);
+
 	@Query("select a from Application a where a.investment.entrepreneus.id= ?1")
 	Collection<Application> findManyByEntrepreneusId(int entrepreneusId);
 
@@ -35,7 +38,8 @@ public interface EntrepreneusApplicationRepository extends AbstractRepository {
 	@Query("select a from Application a where a.investment.entrepreneus.id= ?1 AND a.investment.quittel!='' AND a.investment.quittel IS NOT NULL AND EXISTS(select o from Offer o where o.application.id = a.id)")
 	Collection<Application> findApplicationsByExistsOffer(int id);
 
-	@Query("select a from Application a where a.id= ?1 and a.statement='PENDING' AND a.investment.quittel!='' AND a.investment.quittel IS NOT NULL AND EXISTS(select o from Offer o where o.application.id = ?1)")
+	//select a from Application a where a.id= ?1 and a.statement='PENDING' AND a.investment.quittel!='' AND a.investment.quittel IS NOT NULL AND EXISTS(select o from Offer o where o.application.id = ?1)
+	@Query("select a from Application a where a.id= ?1 AND a.investment.quittel!='' AND a.investment.quittel IS NOT NULL AND EXISTS(select o from Offer o where o.application.id = ?1)")
 	Application findOneByIdNoOffer(int id);
 
 	@Query("select o from Offer o where o.application.id = ?1")

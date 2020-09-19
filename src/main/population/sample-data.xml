@@ -240,6 +240,7 @@
 		<property name="deadline" value="2020/12/02 17:00" />
 		<property name="body" value="Body of Notice 1" />
 		<property name="link" value="https://www.example.com" />
+		<property name="confirm" value="true" />
 
 	</bean>
 	<bean id="Notice02" class="acme.entities.notices.Notice">
@@ -250,6 +251,7 @@
 		<property name="deadline" value="2020/12/02 17:00" />
 		<property name="body" value="Body of Notice 2" />
 		<property name="link" value="https://www.example.com" />
+		<property name="confirm" value="true" />
 
 	</bean>
 	<bean id="Notice03" class="acme.entities.notices.Notice">
@@ -259,6 +261,7 @@
 		<property name="deadline" value="2020/12/02 12:00" />
 		<property name="body" value="Body of Notice 3" />
 		<property name="link" value="https://www.example.com" />
+		<property name="confirm" value="true" />
 
 	</bean>
 	<bean id="Notice04" class="acme.entities.notices.Notice">
@@ -268,6 +271,7 @@
 		<property name="deadline" value="2019/12/02 12:00" />
 		<property name="body" value="Body of Notice 4" />
 		<property name="link" value="https://www.example.com" />
+		<property name="confirm" value="true" />
 
 	</bean> 
 
@@ -614,7 +618,6 @@
 		<property name="ticker" value="HEA-20-100002" />
 		<property name="moment" value="2020/08/01 02:00" />
 		<property name="statement" value="PENDING" />
-		<property name="justification" value="" />
 		<property name="moneyOffer" value="13.0€" />
 		<property name="investment" ref="investment03" />
 		<property name="investor" ref="investor01Investor" />
