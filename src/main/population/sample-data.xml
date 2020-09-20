@@ -582,7 +582,7 @@
 		</property>
 		<property name="start" value="2020/04/05 00:00" />
 		<property name="end" value="2021/04/05 00:00" />
-		<property name="budget" value=13.0€" />
+		<property name="budget" value="13.0€" />
 	</bean>
 	<bean id="Activity04" class="acme.entities.investments.Activity">
 		<property name="title" value="Activity 4" />
