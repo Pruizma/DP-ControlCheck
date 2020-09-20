@@ -18,22 +18,18 @@ import acme.framework.controllers.AbstractController;
 public class InvestorApplicationController extends AbstractController<Investor, Application> {
 
 	@Autowired
-	private InvestorApplicationListMineService				listMineService;
+	private InvestorApplicationListMineService	listMineService;
 
 	@Autowired
-	private InvestorApplicationListPendingNoOfferService	listPendingNoOfferService;
+	private InvestorApplicationShowService		showService;
 
 	@Autowired
-	private InvestorApplicationShowService					showService;
-
-	@Autowired
-	private InvestorApplicationCreateService				createService;
+	private InvestorApplicationCreateService	createService;
 
 
 	@PostConstruct
 	private void initialise() {
 		super.addCustomCommand(CustomCommand.LIST_MINE, BasicCommand.LIST, this.listMineService);
-		super.addCustomCommand(CustomCommand.LIST_PENDING_NO_OFFER, BasicCommand.LIST, this.listPendingNoOfferService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 		super.addBasicCommand(BasicCommand.CREATE, this.createService);
 	}

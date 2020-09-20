@@ -28,7 +28,7 @@
 	<acme:form-textarea code="entrepreneus.investment.form.label.description" path="description" readonly="true"/>
 	<acme:form-money code="entrepreneus.investment.form.label.money" path="money" readonly="true"/>
 	<acme:form-url code="entrepreneus.investment.form.label.url" path="url" readonly="true"/>
-	<jstl:if test="${quittel != ''}">
+	<jstl:if test="${not empty quittel}">
 	<acme:form-textarea code="entrepreneus.investment.form.label.quittel" path="quittel" readonly="true"/>
 	</jstl:if>	
 		<jstl:if test="${command != 'create'}">

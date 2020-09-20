@@ -582,7 +582,7 @@
 		</property>
 		<property name="start" value="2020/04/05 00:00" />
 		<property name="end" value="2021/04/05 00:00" />
-		<property name="budget" value=13.0€" />
+		<property name="budget" value="13.0€" />
 	</bean>
 	<bean id="Activity04" class="acme.entities.investments.Activity">
 		<property name="title" value="Activity 4" />
@@ -601,6 +601,8 @@
 		<property name="statement" value="ACCEPTED" />
 		<property name="justification" value="" />
 		<property name="moneyOffer" value="5.0€" />
+		<property name="link" value="https://www.youtube.com/watch?v=J28D_9JpuJM" />
+		<property name="passwordProtected" value="password01..!!" />
 		<property name="investment" ref="investment01" />
 		<property name="investor" ref="investor01Investor" />
 	</bean>
@@ -619,7 +621,8 @@
 		<property name="moment" value="2020/03/02 00:00" />
 		<property name="statement" value="PENDING" />
 		<property name="moneyOffer" value="8.0€" />
-		<property name="investment" ref="investment03" />
+		<property name="link" value="https://www.youtube.com/watch?v=J28D_9JpuJM" />
+		<property name="investment" ref="investment04" />
 		<property name="investor" ref="investor01Investor" />
 	</bean>
 
@@ -730,14 +733,5 @@
 		<bean id="banner04" class="acme.entities.banners.Banner">
 		<property name="name" value="Rome" />
 		<property name="picture" value="https://i.pinimg.com/originals/fc/29/ce/fc29ce3970c7d8ca03fcc45a6d817e8b.jpg" />
-	</bean>
-	
-	<!-- Offers -->
-	<bean name="offer01" class="acme.entities.offer.Offer">
-		<property name="title" value="offer 01"/>
-		<property name="link" value="http://www.wikipedia.com"/>
-		<property name="passProt" value="true"/>
-		<property name="pass" value="no12345..."/>
-		<property name="application" ref="application03"/>
 	</bean>
 </beans>

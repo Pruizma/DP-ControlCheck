@@ -8,12 +8,14 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.components.PasswordChecker;
 import acme.entities.investments.Application;
 import acme.entities.investments.Investment;
 import acme.entities.roles.Investor;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.helpers.MessageHelper;
 import acme.framework.services.AbstractCreateService;
 
 @Service
@@ -43,8 +45,19 @@ public class InvestorApplicationCreateService implements AbstractCreateService<I
 		assert entity != null;
 		assert model != null;
 		int investmentId = entity.getInvestment().getId();
-		request.unbind(entity, model, "ticker", "moneyOffer");
+		request.unbind(entity, model, "ticker", "moneyOffer", "link", "passwordProtected");
 		model.setAttribute("id", investmentId);
+
+		Investment investment;
+		boolean investmentHasQuittel;
+		investment = this.repository.findInvestmentById(investmentId);
+
+		//------------------------------------------------investmentHasQuittel
+		investmentHasQuittel = false;
+		if (investment.getQuittel() != null) {
+			investmentHasQuittel = !investment.getQuittel().isEmpty();
+		}
+		model.setAttribute("investmentHasQuittel", investmentHasQuittel);
 	}
 
 	@Override
@@ -127,6 +140,36 @@ public class InvestorApplicationCreateService implements AbstractCreateService<I
 		if (!errors.hasErrors("moneyOffer")) {
 			boolean minBiggerThanZero = entity.getMoneyOffer().getAmount() >= 0;
 			errors.state(request, minBiggerThanZero, "moneyOffer", "a.o.error.plus");
+		}
+
+		int investmentId = entity.getInvestment().getId();
+		Investment investment;
+		boolean investmentHasQuittel;
+		investment = this.repository.findInvestmentById(investmentId);
+
+		//------------------------------------------------investmentHasQuittel
+		investmentHasQuittel = false;
+		if (investment.getQuittel() != null) {
+			investmentHasQuittel = !investment.getQuittel().isEmpty();
+		}
+
+		if (!errors.hasErrors("investmentHasQuittel")) {
+			if (investmentHasQuittel) {
+				//if link is null, password must be null
+				if (entity.getLink().isEmpty() && !entity.getPasswordProtected().isEmpty()) {
+					errors.add("link", MessageHelper.getMessage("investor.application.error.link.notNull"));
+				}
+
+				//password validation
+				if (!entity.getPasswordProtected().isEmpty()) {
+					PasswordChecker pc = new PasswordChecker(); // clase implementada en components
+					if (request.getLocale().toLanguageTag().equals("en")) { // longitud, letras, digitos, signos de puntuacion.
+						errors.state(request, pc.PasswordCheck(entity.getPasswordProtected(), 10, 1, 1, 1), "pass", "Incorrect Pattern, must minimum: 10 characters that inlcludes at least one letter, one digit, and one punctuation symbol.");
+					} else {
+						errors.state(request, pc.PasswordCheck(entity.getPasswordProtected(), 10, 1, 1, 1), "pass", "Patron incorrecto, debe tener como minimo 10 caracteres que incluyen una letra, un número y un signo de puntuación, como mínimo");
+					}
+				}
+			}
 		}
 	}
 
