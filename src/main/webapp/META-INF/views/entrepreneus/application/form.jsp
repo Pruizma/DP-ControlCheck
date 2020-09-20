@@ -27,7 +27,7 @@
 		
 		<jstl:if test="${passProct == false}">
 		<acme:form-textbox code="entrepreneus.offer.form.label.titleOffer" path="titleOffer" />
-		<jstl:if test="${link != ''}">
+		<jstl:if test="${linkOffer != ''}">
 		<acme:form-url code="entrepreneus.offer.form.label.linkOffer" path="linkOffer" />
 		</jstl:if>
 		</jstl:if>
@@ -38,7 +38,7 @@
 		
 		<jstl:if test="${passProct != false && aux == true}">
 		<acme:form-textbox code="entrepreneus.offer.form.label.titleOffer" path="titleOffer" />
-		<jstl:if test="${link != ''}">
+		<jstl:if test="${linkOffer != ''}">
 		<acme:form-url code="entrepreneus.offer.form.label.linkOffer" path="linkOffer" />
 		</jstl:if>
 		</jstl:if>

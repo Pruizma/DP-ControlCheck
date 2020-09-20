@@ -35,15 +35,14 @@ public class EntrepreneusApplicationShowService implements AbstractShowService<E
 		}
 		int id = request.getModel().getInteger("id");
 		Offer o = this.repository.findOneOfferByApplicationId(id);
-
-		boolean passProct = o.getPassProt();
-		String titleOffer = o.getTitle();
-		String linkOffer = o.getLink();
-		Boolean aux = o.getAux();
 		request.unbind(entity, model, "ticker", "moment", "statement", "justification", "moneyOffer");
 		model.setAttribute("investmentTicker", entity.getInvestment().getTicker());
 		model.setAttribute("investorName", entity.getInvestor().getUserAccount().getUsername());
 		if (o != null) {
+			boolean passProct = o.getPassProt();
+			String titleOffer = o.getTitle();
+			String linkOffer = o.getLink();
+			Boolean aux = o.getAux();
 			int offerid = o.getId();
 			model.setAttribute("offer", offer);
 			model.setAttribute("offerid", offerid);
