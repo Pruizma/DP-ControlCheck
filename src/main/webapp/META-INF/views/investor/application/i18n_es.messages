@@ -14,6 +14,8 @@ investor.offer.form.button.create = Crear oferta
 
 investor.application.form.label.quittel = Quittel
 
+investor.application.form.label.passwordProtected = Contraseña
+investor.application.form.label.link = Enlace de la Oferta
 
 investor.application.form.label.ticker.investment = Identificador de la inversión:
 

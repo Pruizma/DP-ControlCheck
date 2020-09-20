@@ -42,7 +42,7 @@ public class EntrepreneusApplicationUpdateService implements AbstractUpdateServi
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		request.bind(entity, errors, "ticker", "moment", "justification", "moneyOffer", "investment", "investor");
+		request.bind(entity, errors, "ticker", "moment", "moneyOffer", "investment", "investor", "link", "passwordProtected");
 	}
 
 	@Override
@@ -73,11 +73,11 @@ public class EntrepreneusApplicationUpdateService implements AbstractUpdateServi
 		}
 		if (!errors.hasErrors("justification")) {
 			if (entity.getStatement().equals("REJECTED")) {
-				boolean compulsoryJustification = !entity.getJustification().isEmpty();
+				boolean justificationPassed = !entity.getJustification().isEmpty();
 				if (request.getLocale().toLanguageTag().equals("en")) {
-					errors.state(request, compulsoryJustification, "justification", "If the statement is \"REJECTED\" there must be a justification");
+					errors.state(request, justificationPassed, "justification", "If the statement is \"REJECTED\" there must be a justification");
 				} else {
-					errors.state(request, compulsoryJustification, "justification", "Si la declaración es \"REJECTED\" debe haber una justificación");
+					errors.state(request, justificationPassed, "justification", "Si la declaración es \"REJECTED\" debe haber una justificación");
 				}
 			}
 		}

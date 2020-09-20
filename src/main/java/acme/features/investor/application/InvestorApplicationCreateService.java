@@ -152,7 +152,7 @@ public class InvestorApplicationCreateService implements AbstractCreateService<I
 		if (investment.getQuittel() != null) {
 			investmentHasQuittel = !investment.getQuittel().isEmpty();
 		}
-
+		request.getModel().setAttribute("investmentHasQuittel", investmentHasQuittel);
 		if (!errors.hasErrors("investmentHasQuittel")) {
 			if (investmentHasQuittel) {
 				//if link is null, password must be null

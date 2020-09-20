@@ -106,7 +106,7 @@ master.menu.entrepreneus.application.listMine = Lista de aplicaciones
 master.menu.entrepreneus.application.listTicker = Lista de aplicaciones agrupada por Ticker
 master.menu.entrepreneus.application.listFecha = Lista de aplicaciones agrupada por Fecha
 
-master.menu.entrepreneus.application.listPending = Aceptar/Rechazar aplicaciones
+master.menu.entrepreneus.application.listPending = Aplicaciones Pendientes
 
 master.menu.entrepreneus.offer.list = Listar aplicaciones con oferta
 
