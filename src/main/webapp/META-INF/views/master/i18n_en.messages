@@ -103,7 +103,7 @@ master.menu.entrepreneus.application.listMine = Application list
 master.menu.entrepreneus.application.listTicker = Application List Grouped By Ticker
 master.menu.entrepreneus.application.listFecha = Application List Grouped By Moment  
 
-master.menu.entrepreneus.application.listPending = Accept/Reject applications
+master.menu.entrepreneus.application.listPending = Pending applications
 
 master.menu.entrepreneus.offer.list = List applications with offer
 

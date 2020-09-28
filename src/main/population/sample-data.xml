@@ -240,6 +240,7 @@
 		<property name="deadline" value="2020/12/02 17:00" />
 		<property name="body" value="Body of Notice 1" />
 		<property name="link" value="https://www.example.com" />
+		<property name="confirm" value="true" />
 
 	</bean>
 	<bean id="Notice02" class="acme.entities.notices.Notice">
@@ -250,6 +251,7 @@
 		<property name="deadline" value="2020/12/02 17:00" />
 		<property name="body" value="Body of Notice 2" />
 		<property name="link" value="https://www.example.com" />
+		<property name="confirm" value="true" />
 
 	</bean>
 	<bean id="Notice03" class="acme.entities.notices.Notice">
@@ -259,6 +261,7 @@
 		<property name="deadline" value="2020/12/02 12:00" />
 		<property name="body" value="Body of Notice 3" />
 		<property name="link" value="https://www.example.com" />
+		<property name="confirm" value="true" />
 
 	</bean>
 	<bean id="Notice04" class="acme.entities.notices.Notice">
@@ -268,6 +271,7 @@
 		<property name="deadline" value="2019/12/02 12:00" />
 		<property name="body" value="Body of Notice 4" />
 		<property name="link" value="https://www.example.com" />
+		<property name="confirm" value="true" />
 
 	</bean> 
 
@@ -505,7 +509,7 @@
 		<property name="moment" value="2020/05/05 00:00" />
 		<property name="round" value="SERIES-A" />
 		<property name="title" value="Investment 1" />
-		<property name="description" value="Description 1" />
+		<property name="description" value="Investment in FinalMode with Quittel" />
 		<property name="money" value="11.0€" />
 		<property name="finalMode" value="true" />
 		<property name="url" value="https://www.youtube.com/watch?v=J28D_9JpuJM" />
@@ -531,21 +535,20 @@
 		<property name="moment" value="2020/06/05 00:00" />
 		<property name="round" value="ANGEL" />
 		<property name="title" value="Investment 3" />
-		<property name="description" value="Investment with Quittel" />
+		<property name="description" value="Investment in FinalMode without Quittel" />
 		<property name="money" value="13.0€" />
-		<property name="finalMode" value="false" />
+		<property name="finalMode" value="true" />
 		<property name="url" value="https://www.youtube.com/watch?v=J28D_9JpuJM" />
-		<property name="quittel" value="Control Check 03" />
 		<property name="entrepreneus" ref="entrepreneus1Entrepreneus" />
 		<property name="investor" ref="investor01Investor" />
 	</bean>
 
-		<bean id="investment04" class="acme.entities.investments.Investment">
+	<bean id="investment04" class="acme.entities.investments.Investment">
 		<property name="ticker" value="ART-20-000003" />
 		<property name="moment" value="2020/06/06 00:00" />
 		<property name="round" value="BRIDGE" />
 		<property name="title" value="Investment 4" />
-		<property name="description" value="Description 4" />
+		<property name="description" value="Investment with Quittel but no in FinalMode" />
 		<property name="money" value="13.0€" />
 		<property name="finalMode" value="false" />
 		<property name="url" value="https://www.youtube.com/watch?v=J28D_9JpuJM" />
@@ -579,7 +582,7 @@
 		</property>
 		<property name="start" value="2020/04/05 00:00" />
 		<property name="end" value="2021/04/05 00:00" />
-		<property name="budget" value="2.0€" />
+		<property name="budget" value="13.0€" />
 	</bean>
 	<bean id="Activity04" class="acme.entities.investments.Activity">
 		<property name="title" value="Activity 4" />
@@ -598,29 +601,13 @@
 		<property name="statement" value="ACCEPTED" />
 		<property name="justification" value="" />
 		<property name="moneyOffer" value="5.0€" />
+		<property name="link" value="https://www.youtube.com/watch?v=J28D_9JpuJM" />
+		<property name="passwordProtected" value="password01..!!" />
 		<property name="investment" ref="investment01" />
 		<property name="investor" ref="investor01Investor" />
 	</bean>
-	<bean id="application02" class="acme.entities.investments.Application">
-		<property name="ticker" value="TEC-20-100001" />
-		<property name="moment" value="2020/08/01 01:00" />
-		<property name="statement" value="ACCEPTED" />
-		<property name="justification" value="It did satisfy the requirements" />
-		<property name="moneyOffer" value="6.0€" />
-		<property name="investment" ref="investment02" />
-		<property name="investor" ref="investor02Investor" />
-	</bean>
-	<bean id="application03" class="acme.entities.investments.Application">
-		<property name="ticker" value="HEA-20-100002" />
-		<property name="moment" value="2020/08/01 02:00" />
-		<property name="statement" value="PENDING" />
-		<property name="justification" value="" />
-		<property name="moneyOffer" value="13.0€" />
-		<property name="investment" ref="investment03" />
-		<property name="investor" ref="investor01Investor" />
-	</bean>
 		<bean id="application04" class="acme.entities.investments.Application">
-		<property name="ticker" value="HEA-20-100003" />
+		<property name="ticker" value="HEA-20-100001" />
 		<property name="moment" value="2020/06/01 00:00" />
 		<property name="statement" value="REJECTED" />
 		<property name="justification" value="It didn't satisfy the requirements" />
@@ -630,11 +617,12 @@
 	</bean>
 	
 	<bean id="application05" class="acme.entities.investments.Application">
-		<property name="ticker" value="HEA-20-100004" />
+		<property name="ticker" value="HEA-20-100002" />
 		<property name="moment" value="2020/03/02 00:00" />
 		<property name="statement" value="PENDING" />
 		<property name="moneyOffer" value="8.0€" />
-		<property name="investment" ref="investment03" />
+		<property name="link" value="https://www.youtube.com/watch?v=J28D_9JpuJM" />
+		<property name="investment" ref="investment04" />
 		<property name="investor" ref="investor01Investor" />
 	</bean>
 
@@ -745,14 +733,5 @@
 		<bean id="banner04" class="acme.entities.banners.Banner">
 		<property name="name" value="Rome" />
 		<property name="picture" value="https://i.pinimg.com/originals/fc/29/ce/fc29ce3970c7d8ca03fcc45a6d817e8b.jpg" />
-	</bean>
-	
-	<!-- Offers -->
-	<bean name="offer01" class="acme.entities.offer.Offer">
-		<property name="title" value="offer 01"/>
-		<property name="link" value="http://www.wikipedia.com"/>
-		<property name="passProt" value="true"/>
-		<property name="pass" value="no12345..."/>
-		<property name="application" ref="application03"/>
 	</bean>
 </beans>

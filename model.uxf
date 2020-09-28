@@ -642,7 +642,7 @@ Activity
       <x>1582</x>
       <y>679</y>
       <w>231</w>
-      <h>91</h>
+      <h>126</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Application
@@ -651,7 +651,9 @@ Application
 + moment: Date {Temporal(TIMESTAMP), Past}
 + statement: String {Temporal(TIMESTAMP)}
 + moneyOffer: Money {Valid}{NotNull}
-+ justification: String</panel_attributes>
++ justification: String
++ link: URL
++ passwordProtected: String</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -1237,50 +1239,5 @@ Dashboard
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>1617</x>
-      <y>840</y>
-      <w>147</w>
-      <h>98</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;Entity&gt;&gt;
-Offer
---
-+ title: String {NotBlank}
-+ link: String {URL}
-+ passProt: Boolean
-+ pass: String
-+ aux: Boolean
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1673</x>
-      <y>763</y>
-      <w>35</w>
-      <h>91</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-x
-m1=1
-has
-m2=1</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>1757</x>
-      <y>777</y>
-      <w>294</w>
-      <h>140</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;-
-extends</panel_attributes>
-    <additional_attributes>400.0;10.0;10.0;180.0</additional_attributes>
   </element>
 </diagram>

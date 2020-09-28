@@ -18,15 +18,14 @@
 <acme:form>
 
 	<acme:form-textbox code="entrepreneus.activity.form.label.title" path="title"/>
-	<jstl:if test="${command != 'create' }">
-	<acme:form-moment  readonly = "true" code="entrepreneus.activity.form.label.start" path="start"/>
-	</jstl:if>
+
+	<acme:form-moment code="entrepreneus.activity.form.label.start" path="start"/>
 	
 	<acme:form-moment code="entrepreneus.activity.form.label.end" path="end"/>
 	<acme:form-textbox code="entrepreneus.activity.form.label.budget" path="budget"/>
 
 <acme:form-submit test="${command == 'create'}" code = "entrepreneus.activity.form.button.create" action = "/entrepreneus/activity/create?id=${id}"/>
-	<acme:form-submit test="${command == 'show'}" code = "entrepreneus.activity.form.button.update" action = "/entrepreneus/activity/update?id=${id}" method="post"/>
-	<acme:form-submit test="${command == 'show'}" code = "entrepreneus.activity.form.button.delete" action = "/entrepreneus/activity/delete"/>
+	<acme:form-submit test="${command == 'show' or command == 'update'}" code = "entrepreneus.activity.form.button.update" action = "/entrepreneus/activity/update?id=${id}"/>
+	<acme:form-submit test="${command == 'show' or command == 'update'}" code = "entrepreneus.activity.form.button.delete" action = "/entrepreneus/activity/delete"/>
   	<acme:form-return code="entrepreneus.activity.form.button.return"/>
 </acme:form>

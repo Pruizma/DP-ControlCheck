@@ -206,6 +206,26 @@ public class EntrepreneusInvestmentUpdateService implements AbstractUpdateServic
 				errors.state(request, hasToBeTrue, "description", "No use palabras malsonantes, La Frase " + flagWord + " no esta permitida!");
 			}
 		}
+
+		if (!errors.hasErrors("quittel")) {
+			boolean hasToBeTrue = true;
+			Collection<CustomisationParameter> customisationParameters = this.cpRepo.findManyAll();
+			String spamWords = customisationParameters.iterator().next().getSpamWords();
+			String[] arraySpamWords = spamWords.split(", ");
+			String flagWord = "";
+			for (String a : arraySpamWords) {
+				if (entity.getQuittel().contains(a)) {
+					flagWord = a;
+					hasToBeTrue = false;
+					break;
+				}
+			}
+			if (request.getLocale().toLanguageTag().equals("en")) {
+				errors.state(request, hasToBeTrue, "quittel", "Do not use spam words! The word " + flagWord + " is not allowed!");
+			} else {
+				errors.state(request, hasToBeTrue, "quittel", "No use palabras malsonantes, La Frase " + flagWord + " no esta permitida!");
+			}
+		}
 	}
 
 	@Override

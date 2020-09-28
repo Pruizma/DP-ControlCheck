@@ -2,6 +2,7 @@
 package acme.features.entrepreneus.activity;
 
 import java.util.Collection;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,8 +20,8 @@ import acme.framework.services.AbstractUpdateService;
 public class EntrepreneusActivityUpdateService implements AbstractUpdateService<Entrepreneus, Activity> {
 
 	@Autowired
-	EntrepreneusActivityRepository repository;
-	
+	EntrepreneusActivityRepository					repository;
+
 	@Autowired
 	AdministratorCustomisationParameterRepository	customRepo;
 
@@ -82,7 +83,7 @@ public class EntrepreneusActivityUpdateService implements AbstractUpdateService<
 			Boolean isLower = sumOfBudgets - thisBudgetBefore + thisBudgetAfter <= totalBudget;
 			errors.state(request, isLower, "budget", "budget.error.message");
 		}
-		
+
 		if (!errors.hasErrors("budget")) {
 			boolean moneyCurrencyMax = entity.getBudget().getCurrency().equals("EUR") || entity.getBudget().getCurrency().equals("EUROS") || entity.getBudget().getCurrency().equals("€");
 			errors.state(request, moneyCurrencyMax, "budget", "error.money");
@@ -94,7 +95,6 @@ public class EntrepreneusActivityUpdateService implements AbstractUpdateService<
 			errors.state(request, minBiggerThanZero, "budget", "error.plus");
 		}
 
-		
 		if (!errors.hasErrors("title")) {
 			boolean hasToBeTrue = true;
 			Collection<CustomisationParameter> customisationParameters = this.customRepo.findManyAll();
@@ -107,6 +107,23 @@ public class EntrepreneusActivityUpdateService implements AbstractUpdateService<
 				}
 			}
 			errors.state(request, hasToBeTrue, "title", "error.nospam");
+		}
+
+		//Deadline cannot be in the past
+		if (!errors.hasErrors("end")) {
+			Date now = new Date(System.currentTimeMillis() - 1);
+			boolean deadlinePassed = entity.getEnd().after(now);
+			if (!deadlinePassed) {
+				errors.state(request, deadlinePassed, "end", "a.o.error.deadline.passed");
+			}
+		}
+
+		//Deadline must be bigger than start
+		if (!errors.hasErrors("end")) {
+			boolean deadlinePassed = entity.getEnd().after(entity.getStart());
+			if (!deadlinePassed) {
+				errors.state(request, deadlinePassed, "end", "a.o.error.bigger.deadline");
+			}
 		}
 	}
 

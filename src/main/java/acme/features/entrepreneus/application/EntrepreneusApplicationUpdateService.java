@@ -1,27 +1,47 @@
 
 package acme.features.entrepreneus.application;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.customisationParameters.CustomisationParameter;
 import acme.entities.investments.Application;
 import acme.entities.roles.Entrepreneus;
+import acme.features.administrator.customisationParameters.AdministratorCustomisationParameterRepository;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractUpdateService;
 
 @Service
 public class EntrepreneusApplicationUpdateService implements AbstractUpdateService<Entrepreneus, Application> {
 
 	@Autowired
-	EntrepreneusApplicationRepository repository;
+	EntrepreneusApplicationRepository				repository;
+
+	@Autowired
+	AdministratorCustomisationParameterRepository	cpRepo;
 
 
 	@Override
 	public boolean authorise(final Request<Application> request) {
 		assert request != null;
-		return true;
+
+		boolean result;
+		int applicationId;
+		Application application;
+		Entrepreneus entrepreneur;
+		Principal principal;
+
+		applicationId = request.getModel().getInteger("id");
+		application = this.repository.findOneById(applicationId);
+		entrepreneur = application.getInvestment().getEntrepreneus();
+		principal = request.getPrincipal();
+		result = entrepreneur.getUserAccount().getId() == principal.getAccountId();
+		return result;
 	}
 
 	@Override
@@ -29,7 +49,7 @@ public class EntrepreneusApplicationUpdateService implements AbstractUpdateServi
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
-		request.bind(entity, errors, "ticker", "moment", "moneyOffer", "investment", "investor");
+		request.bind(entity, errors, "ticker", "moment", "moneyOffer", "investment", "investor", "link", "passwordProtected");
 	}
 
 	@Override
@@ -60,12 +80,31 @@ public class EntrepreneusApplicationUpdateService implements AbstractUpdateServi
 		}
 		if (!errors.hasErrors("justification")) {
 			if (entity.getStatement().equals("REJECTED")) {
-				boolean compulsoryJustification = !entity.getJustification().isEmpty();
+				boolean justificationPassed = !entity.getJustification().isEmpty();
 				if (request.getLocale().toLanguageTag().equals("en")) {
-					errors.state(request, compulsoryJustification, "justification", "If the statement is \"REJECTED\" there must be a justification");
+					errors.state(request, justificationPassed, "justification", "If the statement is \"REJECTED\" there must be a justification");
 				} else {
-					errors.state(request, compulsoryJustification, "justification", "Si la declaración es \"REJECTED\" debe haber una justificación");
+					errors.state(request, justificationPassed, "justification", "Si la declaración es \"REJECTED\" debe haber una justificación");
 				}
+			}
+		}
+		if (!errors.hasErrors("justification")) {
+			boolean hasToBeTrue = true;
+			Collection<CustomisationParameter> customisationParameters = this.cpRepo.findManyAll();
+			String spamWords = customisationParameters.iterator().next().getSpamWords();
+			String[] arraySpamWords = spamWords.split(", ");
+			String flagWord = "";
+			for (String a : arraySpamWords) {
+				if (entity.getJustification().contains(a)) {
+					flagWord = a;
+					hasToBeTrue = false;
+					break;
+				}
+			}
+			if (request.getLocale().toLanguageTag().equals("en")) {
+				errors.state(request, hasToBeTrue, "justification", "Do not use spam words! The word " + flagWord + " is not allowed!");
+			} else {
+				errors.state(request, hasToBeTrue, "justification", "No use palabras malsonantes, La Frase " + flagWord + " no esta permitida!");
 			}
 		}
 	}

@@ -15,6 +15,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 
+import org.hibernate.validator.constraints.URL;
+
 import acme.entities.roles.Investor;
 import acme.framework.datatypes.Money;
 import acme.framework.entities.DomainEntity;
@@ -46,6 +48,15 @@ public class Application extends DomainEntity {
 	@Valid
 	@NotNull
 	private Money				moneyOffer;
+
+	// Control-Check
+
+	@URL
+	private String				link;
+
+	private String				passwordProtected;
+
+	// Control-Check
 
 	@NotNull
 	@Valid

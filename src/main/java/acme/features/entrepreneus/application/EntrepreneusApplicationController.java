@@ -30,9 +30,6 @@ public class EntrepreneusApplicationController extends AbstractController<Entrep
 	private EntrepreneusApplicationListPendingService	listPendingService;
 
 	@Autowired
-	private EntrepreneusApplicationOfferListService		listOfferService;
-
-	@Autowired
 	private EntrepreneusApplicationShowService			showService;
 
 	@Autowired
@@ -45,7 +42,6 @@ public class EntrepreneusApplicationController extends AbstractController<Entrep
 		super.addCustomCommand(CustomCommand.LIST_FECHA, BasicCommand.LIST, this.listFechaService);
 		super.addCustomCommand(CustomCommand.LIST_TICKER, BasicCommand.LIST, this.listTickerService);
 		super.addCustomCommand(CustomCommand.LIST_PENDING, BasicCommand.LIST, this.listPendingService);
-		super.addCustomCommand(CustomCommand.LIST_OFFER, BasicCommand.LIST, this.listOfferService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
 	}

@@ -14,6 +14,8 @@ administrator.notice.list.label.moment = Momento
 administrator.notice.list.label.deadline = Fecha límite
 administrator.notice.list.label.body = Cuerpo
 
+administrator.notice.form.label.confirm = Confirmación de la creación de la noticia:
+
 administrator.notice.form.label.headerImage = Imagen de cabecera
 administrator.notice.form.label.title = Título
 administrator.notice.form.label.moment = Momento
@@ -25,3 +27,5 @@ error.nospam = Ha usado lenguaje ofensivo, por favor no haga eso
 
 administrator.notice.form.button.create = Crear
 administrator.notice.form.button.return = Volver
+
+a.o.error.deadline.confirm = Debes confirmar la creación de la noticia

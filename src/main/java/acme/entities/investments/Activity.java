@@ -1,3 +1,4 @@
+
 package acme.entities.investments;
 
 import java.util.Date;
@@ -9,7 +10,6 @@ import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Past;
 
 import acme.framework.datatypes.Money;
 import acme.framework.entities.DomainEntity;
@@ -20,32 +20,31 @@ import lombok.Setter;
 @Getter
 @Setter
 
-public class Activity extends DomainEntity{
-	
+public class Activity extends DomainEntity {
+
 	// Serialisation identifier -----------------------------------------------
 
-			private static final long	serialVersionUID	= 1L;
+	private static final long	serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
 
-			
-			@NotNull
-			@Valid
-			@ManyToOne(optional = false)
-			private Investment investment;
-			
-			@NotBlank
-			private String title;
-			
-			@Temporal(TemporalType.TIMESTAMP)
-			@Past
-			private Date				start;
-			
-			@NotNull
-			@Temporal(TemporalType.TIMESTAMP)
-			private Date				end;
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	private Investment			investment;
 
-			@NotNull
-			@Valid
-			private Money				budget;
-			}
+	@NotBlank
+	private String				title;
+
+	@Temporal(TemporalType.TIMESTAMP)
+	@NotNull
+	private Date				start;
+
+	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date				end;
+
+	@NotNull
+	@Valid
+	private Money				budget;
+}

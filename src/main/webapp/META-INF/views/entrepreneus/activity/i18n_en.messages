@@ -28,3 +28,6 @@ error.plus =  The Money must be > 0
 error.nospam = You used inappropriate language, please do not use words like that
 
 entrepreneus.activity.form.button.return = Return
+
+a.o.error.deadline.passed = Deadline must be in the future
+a.o.error.bigger.deadline = Deadline must be bigger than moment of creation

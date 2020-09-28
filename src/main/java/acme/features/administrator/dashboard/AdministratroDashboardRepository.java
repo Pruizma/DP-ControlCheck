@@ -15,13 +15,12 @@ public interface AdministratroDashboardRepository extends AbstractRepository {
 	@Query("select count(i) from Investment i")
 	Double numberOfInvestments();
 
-	// Es nuestro caso Offer es OneToOne por lo que si el Offer tiene link, la Application tendrá, y los que no tenga Offer pues no pueden tener link
-	@Query("select count(a) from Offer a where a.link != null")
+	@Query("select count(a) from Application a where a.link != null")
 	Double applicationsWithLink();
 
 	//Mismo proceidmiento que el de arriba
 
-	@Query("select count(a) from Offer a where a.passProt != false")
+	@Query("select count(a) from Application a where a.passwordProtected != null")
 	Double applicationsWithPasswordProtected();
 
 	@Query("select count(a) from Application a")

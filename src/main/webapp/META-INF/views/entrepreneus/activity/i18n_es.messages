@@ -29,3 +29,6 @@ error.nospam = Ha usado lenguaje ofensivo, por favor no haga eso
 
 
 entrepreneus.activity.form.button.return = Volver
+
+a.o.error.deadline.passed = La fecha limite debe ser en el futuro
+a.o.error.bigger.deadline = La fecha limite debe ser despues de la fecha de inicio

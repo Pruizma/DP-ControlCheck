@@ -20,3 +20,6 @@ entrepreneus.application.list.label.moment = Moment
 entrepreneus.application.form.button.list-fecha = Ordered list
 
 entrepreneus.application.form.button.update = Accept/Reject
+
+entrepreneus.offer.form.label.passwordOffer = Password of Offer
+entrepreneus.offer.form.label.linkOffer = Link of Offer

@@ -12,7 +12,7 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface InvestorInvestmentRepository extends AbstractRepository {
 
-	@Query("select c from Investment c")
+	@Query("select c from Investment c where c.finalMode = true")
 	Collection<Investment> findMany();
 
 	@Query("select c from Investment c where c.id =?1")

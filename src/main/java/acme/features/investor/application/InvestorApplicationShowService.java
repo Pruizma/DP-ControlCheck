@@ -8,6 +8,7 @@ import acme.entities.investments.Application;
 import acme.entities.roles.Investor;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractShowService;
 
 @Service
@@ -20,7 +21,20 @@ public class InvestorApplicationShowService implements AbstractShowService<Inves
 	@Override
 	public boolean authorise(final Request<Application> request) {
 		assert request != null;
-		return true;
+
+		boolean result;
+		int applicationId;
+		Application application;
+		Investor investor;
+		Principal principal;
+
+		applicationId = request.getModel().getInteger("id");
+		application = this.repository.findOneById(applicationId);
+		investor = application.getInvestor();
+		principal = request.getPrincipal();
+		result = investor.getUserAccount().getId() == principal.getAccountId();
+		return result;
+
 	}
 
 	@Override
@@ -28,14 +42,10 @@ public class InvestorApplicationShowService implements AbstractShowService<Inves
 		assert request != null;
 		assert entity != null;
 		assert model != null;
-		boolean offer = false;
-		if (this.repository.findOneByIdNoOffer(request.getModel().getInteger("id")) != null) {
-			offer = true;
-		}
-		request.unbind(entity, model, "ticker", "moment", "statement", "justification", "moneyOffer");
+		request.unbind(entity, model, "ticker", "moment", "statement", "justification", "moneyOffer", "link", "passwordProtected");
 		model.setAttribute("investmentTicker", entity.getInvestment().getTicker());
 		model.setAttribute("investorName", entity.getInvestor().getUserAccount().getUsername());
-		model.setAttribute("offer", offer);
+		model.setAttribute("quittel", entity.getInvestment().getQuittel());
 	}
 
 	@Override
